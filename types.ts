@@ -15,6 +15,7 @@ export interface ServiceItem {
 export interface PortfolioItem {
   id: number;
   title: string;
+  title_zh?: string; // Optional Chinese title
   category: string;
   description?: string; // Extended description for the detail page
   location?: string;

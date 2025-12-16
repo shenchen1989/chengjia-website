@@ -16,7 +16,7 @@ export const CONTENT: Record<string, Content> = {
       contact: "联系我们",
     },
     hero: {
-      title: "北欧华人空间的理想构建者",
+      title: "海外华人空间的理想构建者",
       subtitle: "从设计图纸到全屋定制落地。CJ Studio 诚嘉设计专注为丹麦、瑞典的华人客户提供高性价比的餐厅装修与住宅改造服务。",
       cta: "获取免费报价",
       experience: "10年设计经验 · 专注落地实操",
@@ -62,7 +62,7 @@ export const CONTENT: Record<string, Content> = {
     },
     contact: {
       title: "联系我们",
-      subtitle: "免费咨询，欢迎比价",
+      subtitle: "期待与您沟通您的项目",
       email: "电子邮箱",
       phone: "联系电话",
       wechat: "微信咨询",
@@ -190,19 +190,19 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     // REPLACED PROJECT: C&B Nail Salon
     id: 4,
     title: "C&B Nail Salon",
+    title_zh: "C&B 美甲沙龙",
     category: "Commercial",
     description: "A sophisticated nail salon design featuring warm wood textures, custom polish display shelving, and ergonomic pedicure stations. The space uses a soft beige palette and hidden LED lighting to create a serene, high-end atmosphere for clients.",
     location: "Copenhagen, Denmark",
     year: "2024",
-    // 🔴 这里的图片是占位符，请您将引号内的链接替换为您图库中真实图片的直接链接 (以 .jpg/.png 结尾)
-    imageUrl: "https://images.unsplash.com/photo-1632345031635-415d3e284a1e?q=80&w=1470&auto=format&fit=crop", 
+    imageUrl: "https://i.postimg.cc/q7BSVmQd/场景_1.png", 
     gallery: [
-      "https://images.unsplash.com/photo-1632345031635-415d3e284a1e?q=80&w=1470&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop", 
-      "https://images.unsplash.com/photo-1560185893-a55cbc8c57e5?q=80&w=1470&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1374&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1470&auto=format&fit=crop"
+      "https://i.postimg.cc/q7BSVmQd/场景_1.png",
+      "https://i.postimg.cc/RZLyYr1z/场景_2.png",
+      "https://i.postimg.cc/13r2dx0z/场景_3.png",
+      "https://i.postimg.cc/SN0PNQDN/场景_7.png",
+      "https://i.postimg.cc/HsQhJGh4/场景_8.png",
+      "https://i.postimg.cc/y8Ln97hw/场景_9.png"
     ]
   },
   {

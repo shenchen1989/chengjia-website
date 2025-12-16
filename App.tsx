@@ -61,13 +61,18 @@ function App() {
             project={selectedProject} 
             content={content.portfolio} 
             onBack={handleBackToHome}
+            lang={lang}
           />
         ) : (
           <>
             <Hero content={content.hero} />
             <Services content={content.services} />
             <About content={content.about} />
-            <PortfolioSection content={content.portfolio} onProjectClick={handleProjectClick} />
+            <PortfolioSection 
+              content={content.portfolio} 
+              onProjectClick={handleProjectClick} 
+              lang={lang}
+            />
             <Contact content={content.contact} />
           </>
         )}
