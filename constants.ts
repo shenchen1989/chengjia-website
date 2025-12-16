@@ -2,7 +2,7 @@
 import { Content, PortfolioItem } from './types';
 
 // =================================================================
-// 🟢 已更新您的 LOGO
+// 🟢 您的 LOGO 设置
 // =================================================================
 export const LOGO_URL = "https://i.postimg.cc/mrB5sdLw/LOGO.png"; 
 
@@ -73,11 +73,11 @@ export const CONTENT: Record<string, Content> = {
       formSubmit: "发送留言",
     },
     ai: {
-      title: "CJ Studio 智能助手",
-      initialMessage: "您好！我是 CJ Studio 的 AI 助手。我可以为您提供装修建议、估算预算，或者解答关于北欧全屋定制的问题。请问有什么可以帮您？",
-      placeholder: "请输入您的问题...",
-      disclaimer: "AI回复仅供参考，具体方案请以人工咨询为准。",
-    }
+      title: "装修顾问 AI",
+      initialMessage: "您好！我是 CJ Studio 的 AI 助手。请问有什么关于装修、全屋定制或设计的问题可以帮您？",
+      placeholder: "输入您的问题...",
+      disclaimer: "AI 建议仅供参考，具体方案请咨询设计师。",
+    },
   },
   en: {
     nav: {
@@ -145,11 +145,11 @@ export const CONTENT: Record<string, Content> = {
       formSubmit: "Send Message",
     },
     ai: {
-      title: "CJ Studio AI Assistant",
-      initialMessage: "Hello! I'm the AI assistant for CJ Studio. I can provide renovation advice, budget estimates, or answer questions about custom cabinetry. How can I help you?",
-      placeholder: "Type your message...",
-      disclaimer: "AI responses are for reference only.",
-    }
+      title: "Design Adviser AI",
+      initialMessage: "Hello! I am CJ Studio's AI assistant. How can I help you with renovation, cabinetry, or design today?",
+      placeholder: "Ask a question...",
+      disclaimer: "AI advice is for reference only. Please consult our designers.",
+    },
   },
 };
 

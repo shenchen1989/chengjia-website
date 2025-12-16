@@ -72,7 +72,7 @@ function App() {
           </>
         )}
       </main>
-      
+
       <AIAdviser content={content.ai} lang={lang} />
     </div>
   );
