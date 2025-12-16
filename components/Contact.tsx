@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Content } from '../types';
 import { Mail, Phone, MapPin, MessageCircle, Globe } from 'lucide-react';
-import { LOGO_URL } from '../constants';
+import Logo from './Logo';
 
 interface ContactProps {
   content: Content['contact'];
@@ -16,7 +17,10 @@ const Contact: React.FC<ContactProps> = ({ content }) => {
           {/* Contact Info */}
           <div>
             <div className="mb-10">
-                <div className="font-serif text-2xl font-bold tracking-tight mb-6">CJ Studio</div>
+                <div className="flex items-center gap-3 mb-6">
+                    <Logo className="h-8 w-8 text-stone-900" />
+                    <span className="font-serif text-2xl font-bold tracking-tight">CJ Studio</span>
+                </div>
                 <h2 className="text-4xl font-serif text-stone-900 mb-4">{content.title}</h2>
                 <p className="text-stone-500 font-light text-lg">{content.subtitle}</p>
             </div>
