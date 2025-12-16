@@ -1,3 +1,4 @@
+
 export type Language = 'zh' | 'en';
 
 export interface NavItem {
@@ -15,7 +16,11 @@ export interface PortfolioItem {
   id: number;
   title: string;
   category: string;
-  imageUrl: string;
+  description?: string; // Extended description for the detail page
+  location?: string;
+  year?: string;
+  imageUrl: string; // Cover image
+  gallery?: string[]; // Array of additional images
 }
 
 export interface Content {
@@ -52,14 +57,8 @@ export interface Content {
   portfolio: {
     title: string;
     subtitle: string;
-  };
-  ai: {
-    title: string;
-    subtitle: string;
-    placeholder: string;
-    send: string;
-    disclaimer: string;
-    initialMessage: string;
+    viewProject: string;
+    backToHome: string;
   };
   contact: {
     title: string;
@@ -72,5 +71,11 @@ export interface Content {
     formEmail: string;
     formMessage: string;
     formSubmit: string;
+  };
+  ai: {
+    title: string;
+    initialMessage: string;
+    placeholder: string;
+    disclaimer: string;
   };
 }

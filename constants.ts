@@ -1,7 +1,10 @@
+
 import { Content, PortfolioItem } from './types';
 
-// Using the provided URL. If it fails to load, the UI handles it cleanly.
-export const LOGO_URL = "https://files.oaiusercontent.com/file-2s95hGq1tXbU6L26TDKN3n";
+// =================================================================
+// 🟢 已更新您的 LOGO
+// =================================================================
+export const LOGO_URL = "https://i.postimg.cc/mrB5sdLw/LOGO.png"; 
 
 export const CONTENT: Record<string, Content> = {
   zh: {
@@ -54,14 +57,8 @@ export const CONTENT: Record<string, Content> = {
     portfolio: {
       title: "精选案例",
       subtitle: "实用主义与美学的平衡",
-    },
-    ai: {
-      title: "AI 装修顾问",
-      subtitle: "担心预算超支？不确定风格？先问问我们的 AI 助手。",
-      placeholder: "例如：我在丹麦买了个80平的老公寓，想翻新厨房和厕所，大概要多少钱？",
-      send: "发送",
-      disclaimer: "AI 估算仅供参考，具体施工报价请联系人工客服。",
-      initialMessage: "你好！我是 CJ Studio 的智能助手。无论您是想做全屋定制，还是翻新餐厅，都可以问我。请告诉我您的城市和需求。",
+      viewProject: "查看项目详情",
+      backToHome: "返回首页",
     },
     contact: {
       title: "联系我们",
@@ -74,6 +71,12 @@ export const CONTENT: Record<string, Content> = {
       formEmail: "联系方式 (电话/微信)",
       formMessage: "咨询内容 (如：餐厅装修、全屋定制)",
       formSubmit: "发送留言",
+    },
+    ai: {
+      title: "AI 装修顾问",
+      initialMessage: "你好！我是 CJ Studio 的 AI 助手。关于北欧装修、全屋定制或餐厅设计，有什么我可以帮您的吗？",
+      placeholder: "输入您的问题...",
+      disclaimer: "AI回复仅供参考，具体方案请咨询设计师。",
     },
   },
   en: {
@@ -126,14 +129,8 @@ export const CONTENT: Record<string, Content> = {
     portfolio: {
       title: "Selected Work",
       subtitle: "Balancing aesthetics with practicality",
-    },
-    ai: {
-      title: "AI Renovation Consultant",
-      subtitle: "Worried about costs? Ask our AI assistant for a preliminary estimate.",
-      placeholder: "Ex: I bought an apartment in Copenhagen, need to redo the kitchen. Estimate?",
-      send: "Send",
-      disclaimer: "AI estimates are for reference. Contact us for precise quotes.",
-      initialMessage: "Hi! I'm the CJ Studio assistant. Ask me about renovation costs, custom furniture, or restaurant design in the Nordics.",
+      viewProject: "View Project",
+      backToHome: "Back to Home",
     },
     contact: {
       title: "Contact Us",
@@ -147,44 +144,95 @@ export const CONTENT: Record<string, Content> = {
       formMessage: "Message",
       formSubmit: "Send Message",
     },
+    ai: {
+      title: "AI Renovation Adviser",
+      initialMessage: "Hi! I'm CJ Studio's AI assistant. How can I help you with Nordic renovation, custom cabinetry, or restaurant design?",
+      placeholder: "Type your question...",
+      disclaimer: "AI responses are for reference only. Please consult our designers for details.",
+    },
   },
 };
 
+// Note: In a real scenario, 'gallery' would contain different URLs for each project.
+// For now, I'm duplicating the cover image to simulate a gallery structure so you can see how it works.
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 1,
     title: "Nordic Fusion Restaurant",
     category: "Commercial",
+    description: "A complete renovation of a 200sqm Asian fusion restaurant in Copenhagen. We focused on warm lighting and durable materials to create a welcoming atmosphere while adhering to strict local hygiene regulations.",
+    location: "Copenhagen, Denmark",
+    year: "2023",
     imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1374&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1550966871-3ed3c6221741?q=80&w=1470&auto=format&fit=crop"
+    ]
   },
   {
     id: 2,
     title: "Copenhagen Apartment Renovation",
     category: "Residential",
+    description: "Modernizing a historic apartment. We opened up the kitchen to the living room and installed custom cabinetry to maximize storage in the tight Nordic layout.",
+    location: "Copenhagen, Denmark",
+    year: "2022",
     imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1470&auto=format&fit=crop"
+    ]
   },
   {
     id: 3,
     title: "Custom Oak Kitchen",
     category: "Customization",
+    description: "Design and supply of high-end white oak cabinetry. We sourced the materials and provided detailed installation guides for the local carpentry team.",
+    location: "Malmö, Sweden",
+    year: "2023",
     imageUrl: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1470&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=1470&auto=format&fit=crop"
+    ]
   },
   {
     id: 4,
     title: "Bubble Tea Shop Design",
     category: "Commercial",
+    description: "Efficient layout design for a high-traffic bubble tea shop. Focus on workflow optimization for staff and a photogenic waiting area for customers.",
+    location: "Aarhus, Denmark",
+    year: "2021",
     imageUrl: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1470&auto=format&fit=crop"
+    ]
   },
   {
     id: 5,
     title: "Minimalist Wardrobe System",
     category: "Customization",
+    description: "Full-wall custom wardrobe solution designed to blend seamlessly into the bedroom walls.",
+    location: "Odense, Denmark",
+    year: "2022",
     imageUrl: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop"
+    ]
   },
   {
     id: 6,
     title: "Modern Asian Villa",
     category: "Residential",
+    description: "Interior design for a newly built villa, incorporating Feng Shui principles with modern Nordic aesthetics.",
+    location: "Milan, Italy",
+    year: "2020",
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop"
+    ]
   },
 ];
