@@ -1,0 +1,76 @@
+export type Language = 'zh' | 'en';
+
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+export interface ServiceItem {
+  title: string;
+  description: string;
+  icon: 'Restaurant' | 'Home' | 'Commercial' | 'Cabinet';
+}
+
+export interface PortfolioItem {
+  id: number;
+  title: string;
+  category: string;
+  imageUrl: string;
+}
+
+export interface Content {
+  nav: {
+    home: string;
+    services: string;
+    portfolio: string;
+    about: string;
+    contact: string;
+  };
+  hero: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    experience: string;
+    location: string;
+  };
+  about: {
+    title: string;
+    description1: string;
+    description2: string;
+    stats: {
+      years: string;
+      yearsLabel: string;
+      projects: string;
+      projectsLabel: string;
+    }
+  };
+  services: {
+    title: string;
+    subtitle: string;
+    items: ServiceItem[];
+  };
+  portfolio: {
+    title: string;
+    subtitle: string;
+  };
+  ai: {
+    title: string;
+    subtitle: string;
+    placeholder: string;
+    send: string;
+    disclaimer: string;
+    initialMessage: string;
+  };
+  contact: {
+    title: string;
+    subtitle: string;
+    email: string;
+    phone: string;
+    wechat: string;
+    location: string;
+    formName: string;
+    formEmail: string;
+    formMessage: string;
+    formSubmit: string;
+  };
+}
