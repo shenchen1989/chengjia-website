@@ -8,7 +8,6 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
 import AdminGenerator from './components/AdminGenerator';
-import AIAdviser from './components/AIAdviser';
 import { CONTENT } from './constants';
 import { Language, PortfolioItem } from './types';
 
@@ -72,8 +71,6 @@ function App() {
           </>
         )}
       </main>
-
-      <AIAdviser content={content.ai} lang={lang} />
     </div>
   );
 }

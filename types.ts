@@ -72,10 +72,4 @@ export interface Content {
     formMessage: string;
     formSubmit: string;
   };
-  ai: {
-    title: string;
-    initialMessage: string;
-    placeholder: string;
-    disclaimer: string;
-  };
 }

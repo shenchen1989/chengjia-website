@@ -72,12 +72,6 @@ export const CONTENT: Record<string, Content> = {
       formMessage: "咨询内容 (如：餐厅装修、全屋定制)",
       formSubmit: "发送留言",
     },
-    ai: {
-      title: "CJ Studio 装修顾问",
-      initialMessage: "你好！我是 CJ Studio 的 AI 助手。关于北欧装修、全屋定制或设计报价，有什么可以帮您的？",
-      placeholder: "请输入您的问题...",
-      disclaimer: "AI建议仅供参考，具体方案请咨询设计师。",
-    },
   },
   en: {
     nav: {
@@ -143,12 +137,6 @@ export const CONTENT: Record<string, Content> = {
       formEmail: "Contact (Phone/WeChat)",
       formMessage: "Message",
       formSubmit: "Send Message",
-    },
-    ai: {
-      title: "CJ Studio AI Adviser",
-      initialMessage: "Hello! I am the AI assistant for CJ Studio. Ask me anything about renovation in the Nordics, custom cabinetry, or design quotes.",
-      placeholder: "Type your question...",
-      disclaimer: "AI responses are for reference only. Please consult our designers.",
     },
   },
 };
