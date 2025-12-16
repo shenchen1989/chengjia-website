@@ -4,7 +4,7 @@ import { Content, PortfolioItem } from './types';
 // =================================================================
 // 🟢 您的 LOGO 设置
 // =================================================================
-export const LOGO_URL = "https://postimg.cc/gallery/498sL1p"; 
+export const LOGO_URL = "https://i.postimg.cc/hXZr817z/LOGO.png"; 
 
 export const CONTENT: Record<string, Content> = {
   zh: {
