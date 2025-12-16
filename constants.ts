@@ -4,7 +4,7 @@ import { Content, PortfolioItem } from './types';
 // =================================================================
 // 🟢 您的 LOGO 设置
 // =================================================================
-export const LOGO_URL = "https://i.postimg.cc/hXZr817z/LOGO.png"; 
+export const LOGO_URL = "https://i.postimg.cc/mrB5sdLw/LOGO.png"; 
 
 export const CONTENT: Record<string, Content> = {
   zh: {
@@ -73,10 +73,10 @@ export const CONTENT: Record<string, Content> = {
       formSubmit: "发送留言",
     },
     ai: {
-      title: "装修顾问 AI",
-      initialMessage: "您好！我是 CJ Studio 的 AI 助手。请问有什么关于装修、全屋定制或设计的问题可以帮您？",
-      placeholder: "输入您的问题...",
-      disclaimer: "AI 建议仅供参考，具体方案请咨询设计师。",
+      title: "CJ Studio 装修顾问",
+      initialMessage: "你好！我是 CJ Studio 的 AI 助手。关于北欧装修、全屋定制或设计报价，有什么可以帮您的？",
+      placeholder: "请输入您的问题...",
+      disclaimer: "AI建议仅供参考，具体方案请咨询设计师。",
     },
   },
   en: {
@@ -145,16 +145,17 @@ export const CONTENT: Record<string, Content> = {
       formSubmit: "Send Message",
     },
     ai: {
-      title: "Design Adviser AI",
-      initialMessage: "Hello! I am CJ Studio's AI assistant. How can I help you with renovation, cabinetry, or design today?",
-      placeholder: "Ask a question...",
-      disclaimer: "AI advice is for reference only. Please consult our designers.",
+      title: "CJ Studio AI Adviser",
+      initialMessage: "Hello! I am the AI assistant for CJ Studio. Ask me anything about renovation in the Nordics, custom cabinetry, or design quotes.",
+      placeholder: "Type your question...",
+      disclaimer: "AI responses are for reference only. Please consult our designers.",
     },
   },
 };
 
-// Note: In a real scenario, 'gallery' would contain different URLs for each project.
-// For now, I'm duplicating the cover image to simulate a gallery structure so you can see how it works.
+// =================================================================
+// 🟢 案例列表
+// =================================================================
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 1,
@@ -198,16 +199,22 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     ]
   },
   {
+    // REPLACED PROJECT: C&B Nail Salon
     id: 4,
-    title: "Bubble Tea Shop Design",
+    title: "C&B Nail Salon",
     category: "Commercial",
-    description: "Efficient layout design for a high-traffic bubble tea shop. Focus on workflow optimization for staff and a photogenic waiting area for customers.",
-    location: "Aarhus, Denmark",
-    year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop",
+    description: "A sophisticated nail salon design featuring warm wood textures, custom polish display shelving, and ergonomic pedicure stations. The space uses a soft beige palette and hidden LED lighting to create a serene, high-end atmosphere for clients.",
+    location: "Copenhagen, Denmark",
+    year: "2024",
+    // 🔴 这里的图片是占位符，请您将引号内的链接替换为您图库中真实图片的直接链接 (以 .jpg/.png 结尾)
+    imageUrl: "https://images.unsplash.com/photo-1632345031635-415d3e284a1e?q=80&w=1470&auto=format&fit=crop", 
     gallery: [
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1470&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1632345031635-415d3e284a1e?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop", 
+      "https://images.unsplash.com/photo-1560185893-a55cbc8c57e5?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1374&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1470&auto=format&fit=crop"
     ]
   },
   {
