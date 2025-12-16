@@ -72,4 +72,6 @@ export interface Content {
     formMessage: string;
     formSubmit: string;
   };
+  // Adding ai property as optional any to prevent build errors if old AIAdviser file is checked
+  ai?: any;
 }

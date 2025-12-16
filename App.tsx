@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import Navigation from './components/Navigation';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
-import PortfolioSection from './components/PortfolioSection';
+import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import ProjectViewer from './components/ProjectViewer';
+import ProjectDetail from './components/ProjectDetail';
 import AdminGenerator from './components/AdminGenerator';
 import { CONTENT } from './constants';
 import { Language, PortfolioItem } from './types';
@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation 
+      <Navbar 
         lang={lang} 
         setLang={setLang} 
         content={content.nav} 
@@ -57,7 +57,7 @@ function App() {
       
       <main>
         {selectedProject ? (
-          <ProjectViewer 
+          <ProjectDetail 
             project={selectedProject} 
             content={content.portfolio} 
             onBack={handleBackToHome}
@@ -67,7 +67,7 @@ function App() {
             <Hero content={content.hero} />
             <Services content={content.services} />
             <About content={content.about} />
-            <PortfolioSection content={content.portfolio} onProjectClick={handleProjectClick} />
+            <Portfolio content={content.portfolio} onProjectClick={handleProjectClick} />
             <Contact content={content.contact} />
           </>
         )}
