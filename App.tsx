@@ -6,7 +6,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import ProjectDetail from './components/ProjectDetail';
+import ProjectViewer from './components/ProjectViewer';
 import AdminGenerator from './components/AdminGenerator';
 import { CONTENT } from './constants';
 import { Language, PortfolioItem } from './types';
@@ -39,6 +39,7 @@ function App() {
   // Navigation handlers
   const handleProjectClick = (project: PortfolioItem) => {
     setSelectedProject(project);
+    window.scrollTo(0, 0);
   };
 
   const handleBackToHome = () => {
@@ -56,7 +57,7 @@ function App() {
       
       <main>
         {selectedProject ? (
-          <ProjectDetail 
+          <ProjectViewer 
             project={selectedProject} 
             content={content.portfolio} 
             onBack={handleBackToHome}
