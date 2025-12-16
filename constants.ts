@@ -73,11 +73,11 @@ export const CONTENT: Record<string, Content> = {
       formSubmit: "发送留言",
     },
     ai: {
-      title: "AI 装修顾问",
-      initialMessage: "你好！我是 CJ Studio 的 AI 助手。关于北欧装修、全屋定制或餐厅设计，有什么我可以帮您的吗？",
-      placeholder: "输入您的问题...",
-      disclaimer: "AI回复仅供参考，具体方案请咨询设计师。",
-    },
+      title: "CJ Studio 智能助手",
+      initialMessage: "您好！我是 CJ Studio 的 AI 助手。我可以为您提供装修建议、估算预算，或者解答关于北欧全屋定制的问题。请问有什么可以帮您？",
+      placeholder: "请输入您的问题...",
+      disclaimer: "AI回复仅供参考，具体方案请以人工咨询为准。",
+    }
   },
   en: {
     nav: {
@@ -145,11 +145,11 @@ export const CONTENT: Record<string, Content> = {
       formSubmit: "Send Message",
     },
     ai: {
-      title: "AI Renovation Adviser",
-      initialMessage: "Hi! I'm CJ Studio's AI assistant. How can I help you with Nordic renovation, custom cabinetry, or restaurant design?",
-      placeholder: "Type your question...",
-      disclaimer: "AI responses are for reference only. Please consult our designers for details.",
-    },
+      title: "CJ Studio AI Assistant",
+      initialMessage: "Hello! I'm the AI assistant for CJ Studio. I can provide renovation advice, budget estimates, or answer questions about custom cabinetry. How can I help you?",
+      placeholder: "Type your message...",
+      disclaimer: "AI responses are for reference only.",
+    }
   },
 };
 
