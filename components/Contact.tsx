@@ -35,6 +35,16 @@ const Contact: React.FC<ContactProps> = ({ content }) => {
               </div>
 
               <div className="flex items-start gap-6 group">
+                <Phone className="text-stone-400 mt-1" size={20} />
+                <div>
+                  <h4 className="font-medium text-stone-900 text-sm uppercase tracking-wider mb-1">{content.phone}</h4>
+                  <a href="tel:+393242609338" className="text-stone-600 font-light hover:text-stone-900 transition-colors block text-lg">
+                    +39 3242609338
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 group">
                 <Mail className="text-stone-400 mt-1" size={20} />
                 <div>
                   <h4 className="font-medium text-stone-900 text-sm uppercase tracking-wider mb-1">{content.email}</h4>
@@ -48,7 +58,7 @@ const Contact: React.FC<ContactProps> = ({ content }) => {
                 <MessageCircle className="text-stone-400 mt-1" size={20} />
                 <div>
                   <h4 className="font-medium text-stone-900 text-sm uppercase tracking-wider mb-1">{content.wechat}</h4>
-                  <p className="text-stone-600 font-light">ID: ChengjiaDesign</p>
+                  <p className="text-stone-600 font-light">ID: moomin521</p>
                 </div>
               </div>
               

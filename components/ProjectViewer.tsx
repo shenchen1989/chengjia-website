@@ -1,20 +1,23 @@
 
 import React, { useEffect } from 'react';
-import { PortfolioItem, Content } from '../types';
+import { PortfolioItem, Content, Language } from '../types';
 import { ArrowLeft, MapPin, Calendar, Tag } from 'lucide-react';
 
 interface ProjectViewerProps {
   project: PortfolioItem;
   content: Content['portfolio'];
   onBack: () => void;
+  lang: Language;
 }
 
-const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack }) => {
+const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack, lang }) => {
   
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const displayTitle = (lang === 'zh' && project.title_zh) ? project.title_zh : project.title;
 
   return (
     <div className="min-h-screen bg-white pt-12 pb-24 animate-fade-in">
@@ -33,7 +36,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
                 <h1 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6 leading-tight">
-                    {project.title}
+                    {displayTitle}
                 </h1>
                 <p className="text-stone-600 leading-relaxed text-lg font-light">
                     {project.description || "Project description coming soon."}
@@ -74,7 +77,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack 
             <div className="w-full aspect-video bg-stone-100 overflow-hidden">
                 <img 
                     src={project.imageUrl} 
-                    alt={project.title} 
+                    alt={displayTitle} 
                     className="w-full h-full object-cover"
                 />
             </div>
@@ -86,7 +89,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack 
                         <div key={index} className="w-full aspect-[4/3] bg-stone-100 overflow-hidden group">
                             <img 
                                 src={img} 
-                                alt={`${project.title} detail ${index + 1}`} 
+                                alt={`${displayTitle} detail ${index + 1}`} 
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 loading="lazy"
                             />
