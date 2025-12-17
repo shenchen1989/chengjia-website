@@ -35,7 +35,7 @@ export const CONTENT: Record<string, Content> = {
     },
     services: {
       title: "我们的服务",
-      subtitle: "提供概念设计、平面布局、全场景三维模型模拟、效果图渲染、施工图深化及装修预算规划。",
+      subtitle: "提供概念设计、施工图深化、现场管理及建材采购咨询，全方位助力项目落地。",
       items: [
         {
           title: "商业空间全案设计",
@@ -51,6 +51,11 @@ export const CONTENT: Record<string, Content> = {
           title: "软装搭配与高性价比改造",
           description: "针对预算有限的客户，提供基于宜家(IKEA)、JYSK等品牌的家具选品与搭配方案；同时也提供高端全屋定制资源，丰俭由人。",
           icon: "Cabinet",
+        },
+        {
+          title: "全程施工托管与主材陪购",
+          description: "提供施工关键节点现场巡查与质量验收，确保设计精准落地。利用本地建材渠道资源，提供陪同选材服务，从瓷砖、地板到灯具五金，帮您把控预算与品质。",
+          icon: "Construction",
         },
       ],
     },
@@ -118,6 +123,11 @@ export const CONTENT: Record<string, Content> = {
           description: "From budget-friendly makeovers using IKEA/JYSK curation to high-end custom joinery. We provide soft furnishing advice to fit your specific budget.",
           icon: "Cabinet",
         },
+        {
+          title: "Project Management & Procurement",
+          description: "We offer on-site supervision at key construction milestones to ensure design fidelity. We also assist with material selection (tiles, flooring, lighting), leveraging local supplier networks to balance quality and budget.",
+          icon: "Construction",
+        },
       ],
     },
     portfolio: {
@@ -147,53 +157,75 @@ export const CONTENT: Record<string, Content> = {
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 1,
-    title: "Nordic Fusion Restaurant",
+    title: "Sushi Nami",
+    title_zh: "Sushi Nami",
     category: "Commercial",
-    description: "A complete renovation of a 200sqm Asian fusion restaurant in Copenhagen. We focused on warm lighting and durable materials to create a welcoming atmosphere while adhering to strict local hygiene regulations.",
-    location: "Copenhagen, Denmark",
+    description: "A complete renovation of a 200sqm Asian fusion restaurant. We focused on warm lighting and durable materials to create a welcoming atmosphere while adhering to strict local hygiene regulations.",
+    location: "Milan, Italy",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop",
+    imageUrl: "https://i.postimg.cc/tJpdcght/场景_10.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1374&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550966871-3ed3c6221741?q=80&w=1470&auto=format&fit=crop"
+      "https://i.postimg.cc/tJpdcght/场景_10.jpg",
+      "https://i.postimg.cc/J0M3FhbX/场景_5.jpg",
+      "https://i.postimg.cc/QChgzMp1/场景_6.jpg",
+      "https://i.postimg.cc/rsMGHpSG/场景_9.jpg",
+      "https://i.postimg.cc/GtdPfpkt/场景_1.jpg",
+      "https://i.postimg.cc/D0nQNzqZ/场景_2.jpg"
     ]
   },
   {
     id: 2,
-    title: "Copenhagen Apartment Renovation",
-    category: "Residential",
-    description: "Modernizing a historic apartment. We opened up the kitchen to the living room and installed custom cabinetry to maximize storage in the tight Nordic layout.",
-    location: "Copenhagen, Denmark",
-    year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop",
+    title: "Udine Steakhouse",
+    title_zh: "Udine 牛排馆",
+    category: "Commercial",
+    description: "A comprehensive interior design for a modern steakhouse in Udine. The project features a robust spatial layout including detailed isometric views and floor plans, ensuring a seamless flow between the kitchen and dining areas. The design utilizes warm tones and strategic lighting to create an inviting dining experience.",
+    location: "Udine, Italy",
+    year: "2023",
+    imageUrl: "https://i.postimg.cc/Hsf0G34m/场景_1.png",
     gallery: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1470&auto=format&fit=crop"
+      "https://i.postimg.cc/Hsf0G34m/场景_1.png",
+      "https://i.postimg.cc/wTt5bnJd/场景_2.png",
+      "https://i.postimg.cc/WbQmRSmx/场景_3.png",
+      "https://i.postimg.cc/28PdpTF5/场景_4.png",
+      "https://i.postimg.cc/rmnWf9Fb/场景_5.png",
+      "https://i.postimg.cc/j5gNMhSV/场景_6.png",
+      "https://i.postimg.cc/Px3ZSMr9/场景_7.png",
+      "https://i.postimg.cc/3RSptZJs/场景_8.png",
+      "https://i.postimg.cc/xTtCMd8t/iso.jpg",
+      "https://i.postimg.cc/jdZ5Pj2v/plan.jpg"
     ]
   },
   {
     id: 3,
-    title: "Custom Oak Kitchen",
-    category: "Customization",
-    description: "Design and supply of high-end white oak cabinetry. We sourced the materials and provided detailed installation guides for the local carpentry team.",
-    location: "Malmö, Sweden",
+    title: "Zen Sushi Restaurant",
+    title_zh: "Zen Sushi 寿司餐厅",
+    category: "Commercial",
+    description: "A serene sushi dining space designed with minimal aesthetics. We utilized light wood textures, traditional dividers, and soft lighting to create a calm Zen atmosphere.",
+    location: "Italy",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1470&auto=format&fit=crop",
+    imageUrl: "https://i.postimg.cc/x1DjVbkV/场景_2.png",
     gallery: [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1470&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=1470&auto=format&fit=crop"
+      "https://i.postimg.cc/x1DjVbkV/场景_2.png",
+      "https://i.postimg.cc/VkqffLM5/场景_1.png",
+      "https://i.postimg.cc/DybfNcwd/场景_3.png",
+      "https://i.postimg.cc/65G6Phpv/场景_4.png",
+      "https://i.postimg.cc/NMMBk6nR/场景_5.png",
+      "https://i.postimg.cc/G90RRZmk/场景_6.png",
+      "https://i.postimg.cc/4nCGGrxY/场景_7.png",
+      "https://i.postimg.cc/bY4SdrGW/场景_8.png",
+      "https://i.postimg.cc/9f9n5rqJ/场景_11.png",
+      "https://i.postimg.cc/FKSB57Jy/场景_12.png",
+      "https://i.postimg.cc/Z52MMr04/场景_13.png",
+      "https://i.postimg.cc/q7K5VzCL/场景_14.png"
     ]
   },
   {
-    // REPLACED PROJECT: C&B Nail Salon
     id: 4,
     title: "C&B Nail Salon",
     title_zh: "C&B 美甲沙龙",
     category: "Commercial",
-    description: "A sophisticated nail salon design featuring warm wood textures, custom polish display shelving, and ergonomic pedicure stations. The space uses a soft beige palette and hidden LED lighting to create a serene, high-end atmosphere for clients.",
-    location: "Copenhagen, Denmark",
+    description: "A sophisticated nail salon design featuring warm wood textures, custom polish display shelving, and ergonomic pedicure stations.",
+    location: "Italy",
     year: "2024",
     imageUrl: "https://i.postimg.cc/q7BSVmQd/场景_1.png", 
     gallery: [
@@ -208,10 +240,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 5,
     title: "Minimalist Wardrobe System",
+    title_zh: "极简定制衣柜系统",
     category: "Customization",
-    description: "Full-wall custom wardrobe solution designed to blend seamlessly into the bedroom walls.",
-    location: "Odense, Denmark",
-    year: "2022",
+    description: "Full-wall custom wardrobe solution designed to blend seamlessly into the bedroom walls. Maximizing storage while maintaining a clean, uncluttered look.",
+    location: "Copenhagen, Denmark",
+    year: "2024",
     imageUrl: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop",
     gallery: [
       "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop"
@@ -220,14 +253,60 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 6,
     title: "Modern Asian Villa",
+    title_zh: "现代亚洲风格别墅",
     category: "Residential",
-    description: "Interior design for a newly built villa, incorporating Feng Shui principles with modern Nordic aesthetics.",
-    location: "Milan, Italy",
-    year: "2020",
+    description: "Interior design for a newly built villa, incorporating Feng Shui principles with modern Nordic aesthetics. Creating harmony between traditional values and contemporary living.",
+    location: "Stockholm, Sweden",
+    year: "2024",
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop",
     gallery: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop"
     ]
   },
+  // Added placeholder projects to demonstrate slider functionality
+  {
+    id: 7,
+    title: "Nordic Coffee House",
+    title_zh: "北欧极简咖啡馆",
+    category: "Commercial",
+    description: "A cozy coffee shop design focusing on natural light and acoustic comfort. Uses reclaimed wood and soft textiles.",
+    location: "Aarhus, Denmark",
+    year: "2024",
+    imageUrl: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop"]
+  },
+  {
+    id: 8,
+    title: "Urban Apartment Renovation",
+    title_zh: "城市公寓旧改",
+    category: "Residential",
+    description: "Transforming an old 1980s apartment into a modern open-plan living space. Complete kitchen and bathroom overhaul.",
+    location: "Malmö, Sweden",
+    year: "2023",
+    imageUrl: "https://images.unsplash.com/photo-1502005229766-939760a98f78?q=80&w=1473&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1502005229766-939760a98f78?q=80&w=1473&auto=format&fit=crop"]
+  },
+  {
+    id: 9,
+    title: "Fusion Tea House",
+    title_zh: "新中式茶饮店",
+    category: "Commercial",
+    description: "Blending traditional Chinese tea culture with modern Scandinavian design elements. Clean lines meets warm bamboo textures.",
+    location: "Copenhagen, Denmark",
+    year: "2024",
+    imageUrl: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=1374&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=1374&auto=format&fit=crop"]
+  },
+  {
+    id: 10,
+    title: "Compact Studio Living",
+    title_zh: "小户型全屋定制",
+    category: "Customization",
+    description: "Maximizing 35sqm of space with intelligent custom cabinetry and fold-away furniture solutions.",
+    location: "Rome, Italy",
+    year: "2022",
+    imageUrl: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1470&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1470&auto=format&fit=crop"]
+  }
 ];

@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-neutral-900">
       <Navigation 
         lang={lang} 
         setLang={setLang} 
@@ -73,7 +73,7 @@ function App() {
               onProjectClick={handleProjectClick} 
               lang={lang}
             />
-            <Contact content={content.contact} />
+            <Contact content={content.contact} lang={lang} />
           </>
         )}
       </main>
