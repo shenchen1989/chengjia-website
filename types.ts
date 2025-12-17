@@ -68,6 +68,7 @@ export interface Content {
     phone: string;
     wechat: string;
     location: string;
+    linkedin?: string; // Added optional LinkedIn field
     formName: string;
     formEmail: string;
     formMessage: string;
