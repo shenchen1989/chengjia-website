@@ -17,15 +17,15 @@ export const CONTENT: Record<string, Content> = {
     },
     hero: {
       title: "海外华人空间的理想构建者",
-      subtitle: "从设计图纸到落地交付。CJ Studio 诚嘉设计专注为欧洲及中国的客户提供高品质空间解决方案。我们不只是施工方，更是懂工艺的设计事务所，一切只为设计效果的完美呈现。",
+      subtitle: "从设计图纸到落地交付。<span class=\"text-accent-red font-medium text-xl\">CJ Studio 诚嘉设计</span> 专注为欧洲及中国的客户提供高品质空间解决方案。我们不只是施工方，更是懂工艺的设计事务所，一切只为设计效果的完美呈现。",
       cta: "获取免费报价",
       experience: "14年从业经验 · 懂施工的设计团队",
       location: "服务地区：丹麦 / 瑞典 / 意大利 / 中国",
     },
     about: {
       title: "关于 CJ Studio (诚嘉设计)",
-      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维。设计主理人 沈忱 (Shen Chen) 拥有14年行业履历，持有意大利 Unina DBE 建筑设计环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过一线木作与全屋定制生产与安装，了解全木结构住宅施工工艺；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到“懂设计、懂工艺、懂落地”，为您提供高品质的一站式交付。",
-      description2: "市场主理人 徐晨 (Chen Xu) 常驻丹麦，作为一名活跃于欧洲的艺术家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
+      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维。设计主理人 <span class=\"text-accent-red font-serif text-2xl mx-1\">沈忱 (Shen Chen)</span> 拥有14年行业履历，持有意大利 Unina DBE 建筑设计环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过一线木作与全屋定制生产与安装，了解全木结构住宅施工工艺；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到 <span class=\"text-accent-red font-medium text-lg border-b border-accent-red/30 pb-1\">“懂设计、懂工艺、懂落地”</span>，为您提供高品质的一站式交付。",
+      description2: "市场主理人 <span class=\"text-accent-red font-serif text-2xl mx-1\">徐晨 (Chen Xu)</span> 常驻丹麦，作为一名活跃于欧洲的艺术家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
       stats: {
         years: "14+",
         yearsLabel: "从业经验",
@@ -99,15 +99,15 @@ export const CONTENT: Record<string, Content> = {
     },
     hero: {
       title: "Interior Design & Renovation Experts",
-      subtitle: "From blueprints to reality. CJ Studio is a design-driven firm serving clients in Europe and China. We go beyond construction—we are designers who master the craft of building, ensuring every detail serves the final aesthetic.",
+      subtitle: "From blueprints to reality. <span class=\"text-accent-red font-medium text-xl\">CJ Studio</span> is a design-driven firm serving clients in Europe and China. We go beyond construction—we are designers who master the craft of building, ensuring every detail serves the final aesthetic.",
       cta: "Get a Free Quote",
       experience: "14 Years Exp · Design-Led Build",
       location: "Serving: Denmark / Sweden / Italy / China",
     },
     about: {
       title: "About CJ Studio",
-      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Design Principal Shen Chen brings 14 years of diverse international experience and holds a Master's degree in Architecture Design and Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he worked in New Zealand in frontline woodworking and custom furniture production & installation, mastering timber frame construction techniques, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true 'Design-to-Reality' execution.",
-      description2: "Market Principal Chen Xu, based in Denmark, is a distinguished Artist whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
+      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Design Principal <span class=\"text-accent-red font-serif text-2xl mx-1\">Shen Chen</span> brings 14 years of diverse international experience and holds a Master's degree in Architecture Design and Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he worked in New Zealand in frontline woodworking and custom furniture production & installation, mastering timber frame construction techniques, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true <span class=\"text-accent-red font-medium text-lg border-b border-accent-red/30 pb-1\">'Design-to-Reality'</span> execution.",
+      description2: "Market Principal <span class=\"text-accent-red font-serif text-2xl mx-1\">Chen Xu</span>, based in Denmark, is a distinguished Artist whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
       stats: {
         years: "14+",
         yearsLabel: "Years Exp.",
