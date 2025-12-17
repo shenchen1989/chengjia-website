@@ -44,6 +44,8 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
   }, [lightboxIndex]);
 
   const displayTitle = (lang === 'zh' && project.title_zh) ? project.title_zh : project.title;
+  // Use Chinese description if lang is zh and description_zh exists, otherwise fallback to description
+  const displayDescription = (lang === 'zh' && project.description_zh) ? project.description_zh : project.description;
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-24 animate-fade-in relative">
@@ -65,7 +67,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                     {displayTitle}
                 </h1>
                 <p className="text-neutral-600 leading-relaxed text-lg font-light whitespace-pre-line">
-                    {project.description || "Project description coming soon."}
+                    {displayDescription || "Project description coming soon."}
                 </p>
             </div>
             

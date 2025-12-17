@@ -42,10 +42,10 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
         <div>
             <a href="#home" onClick={handleLogoClick} className="block group mb-14">
               <div className="w-12 h-12 mb-5 opacity-90 hover:opacity-100 transition-opacity"> 
-                   <Logo className="w-full h-full text-morandi-900" />
+                   <Logo className="w-full h-full text-accent-red" />
               </div>
               <div className="flex flex-col">
-                <span className="font-sans font-bold text-lg tracking-tight text-morandi-900 leading-none">
+                <span className="font-sans font-bold text-lg tracking-tight text-accent-red leading-none">
                     {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.2em] text-morandi-500 mt-2 font-medium">Interior & Design</span>
@@ -91,9 +91,9 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
             {/* Logo */}
             <a href="#home" onClick={handleLogoClick} className="flex items-center gap-3">
                <div className="h-8 w-8"> 
-                   <Logo className="h-full w-full text-morandi-900" />
+                   <Logo className="h-full w-full text-accent-red" />
                </div>
-               <span className="font-sans font-bold text-lg text-morandi-900">
+               <span className="font-sans font-bold text-lg text-accent-red">
                     {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
                </span>
             </a>

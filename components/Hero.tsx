@@ -21,7 +21,8 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
       <div className="max-w-4xl mx-auto px-6 lg:px-16 relative z-10 w-full">
          <div className="animate-fade-in-up">
             <div className="flex items-center gap-4 mb-8">
-                <span className="h-[1px] w-12 bg-morandi-800"></span>
+                {/* Changed to accent-red for a pop of color */}
+                <span className="h-[1px] w-12 bg-accent-red"></span>
                 <span className="text-morandi-500 text-xs font-bold tracking-[0.2em] uppercase">
                     {content.experience}
                 </span>
