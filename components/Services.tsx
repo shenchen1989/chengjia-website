@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Content } from '../types';
-import { Utensils, Home, Briefcase, Box, HardHat } from 'lucide-react';
+import { Utensils, Home, Briefcase, Box, HardHat, Armchair, Palette } from 'lucide-react';
 
 interface ServicesProps {
   content: Content['services'];
@@ -15,6 +15,8 @@ const Services: React.FC<ServicesProps> = ({ content }) => {
       case 'Cabinet': return <Box className="w-6 h-6 text-neutral-800" />;
       case 'Commercial': return <Briefcase className="w-6 h-6 text-neutral-800" />;
       case 'Construction': return <HardHat className="w-6 h-6 text-neutral-800" />;
+      case 'Furniture': return <Armchair className="w-6 h-6 text-neutral-800" />;
+      case 'Branding': return <Palette className="w-6 h-6 text-neutral-800" />;
       default: return <Home className="w-6 h-6 text-neutral-800" />;
     }
   };
@@ -31,8 +33,8 @@ const Services: React.FC<ServicesProps> = ({ content }) => {
           </p>
         </div>
 
-        {/* Changed grid to 2 columns on medium/large screens to accommodate 4 items evenly */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+        {/* Grid layout adapts for 6 items now */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           {content.items.map((item, index) => (
             <div key={index} className="group flex flex-col items-start border-l-2 border-transparent hover:border-neutral-900 pl-0 hover:pl-6 transition-all duration-300">
               <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
