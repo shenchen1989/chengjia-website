@@ -9,7 +9,7 @@ export interface NavItem {
 export interface ServiceItem {
   title: string;
   description: string;
-  icon: 'Restaurant' | 'Home' | 'Commercial' | 'Cabinet' | 'Construction';
+  icon: 'Restaurant' | 'Home' | 'Commercial' | 'Cabinet' | 'Construction' | 'Furniture' | 'Branding';
 }
 
 export interface PortfolioItem {
