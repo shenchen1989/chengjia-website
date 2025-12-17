@@ -11,119 +11,83 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ content, lang }) => {
   return (
-    <footer id="contact" className="bg-white border-t border-neutral-100 pt-24 pb-12 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-24">
+    <footer id="contact" className="bg-[#1A1A18] text-neutral-400 py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
           
           {/* Contact Info */}
           <div>
-            <div className="mb-10">
-                <div className="flex items-center gap-4 mb-6">
-                    {/* Increased Logo Size */}
-                    <Logo className="h-12 w-12 text-neutral-900" />
-                    {/* Increased Text Size */}
-                    <span className="font-serif text-4xl font-bold tracking-tight text-neutral-900">
-                        {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
-                    </span>
+            <div className="mb-16">
+                <div className="flex items-center gap-4 mb-8">
+                    <div className="bg-white p-2 rounded-full">
+                         <Logo className="h-8 w-8 text-neutral-900" />
+                    </div>
                 </div>
-                <h2 className="text-4xl font-serif text-neutral-900 mb-4">{content.title}</h2>
-                <p className="text-neutral-500 font-light text-lg">{content.subtitle}</p>
+                <h2 className="text-4xl font-serif text-white mb-6">{content.title}</h2>
+                <p className="text-neutral-500 font-light">{content.subtitle}</p>
             </div>
 
-            <div className="space-y-8">
-              <div className="flex items-start gap-6 group">
-                <MapPin className="text-neutral-400 mt-1" size={20} />
-                <div>
-                  <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">Location</h4>
-                  <p className="text-neutral-600 font-light">{content.location}</p>
-                </div>
+            <div className="space-y-6">
+              <div className="flex items-start gap-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-neutral-600 w-24 pt-1">Location</span>
+                <span className="text-neutral-300 font-light">{content.location}</span>
               </div>
 
-              <div className="flex items-start gap-6 group">
-                <Phone className="text-neutral-400 mt-1" size={20} />
-                <div>
-                  <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">{content.phone}</h4>
-                  <a href="tel:+393242609338" className="text-neutral-600 font-light hover:text-neutral-900 transition-colors block text-lg">
+              <div className="flex items-start gap-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-neutral-600 w-24 pt-1">Phone</span>
+                <a href="tel:+393242609338" className="text-neutral-300 font-light hover:text-white transition-colors">
                     +39 3242609338
-                  </a>
-                </div>
+                </a>
               </div>
 
-              <div className="flex items-start gap-6 group">
-                <Mail className="text-neutral-400 mt-1" size={20} />
-                <div>
-                  <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">{content.email}</h4>
-                  <a href="mailto:info@chengjiadesign.com" className="text-neutral-600 font-light hover:text-neutral-900 hover:underline transition-colors block text-lg">
+              <div className="flex items-start gap-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-neutral-600 w-24 pt-1">Email</span>
+                <a href="mailto:info@chengjiadesign.com" className="text-neutral-300 font-light hover:text-white transition-colors">
                     info@chengjiadesign.com
-                  </a>
-                </div>
+                </a>
               </div>
 
-              <div className="flex items-start gap-6 group">
-                <MessageCircle className="text-neutral-400 mt-1" size={20} />
-                <div>
-                  <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">{content.wechat}</h4>
-                  <p className="text-neutral-600 font-light">ID: moomin521</p>
-                </div>
+              <div className="flex items-start gap-6">
+                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-600 w-24 pt-1">WeChat</span>
+                 <span className="text-neutral-300 font-light">moomin521</span>
               </div>
               
-              <div className="flex items-start gap-6 group">
-                <Globe className="text-neutral-400 mt-1" size={20} />
-                <div>
-                  <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">Website</h4>
-                  <a href="https://chengjiadesign.com" className="text-neutral-600 font-light hover:text-neutral-900 transition-colors">
-                    www.chengjiadesign.com
-                  </a>
-                </div>
-              </div>
-
               {content.linkedin && (
-                <div className="flex items-start gap-6 group">
-                  <Linkedin className="text-neutral-400 mt-1" size={20} />
-                  <div>
-                    <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">LinkedIn</h4>
-                    <a 
-                      href={content.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-neutral-600 font-light hover:text-neutral-900 hover:underline transition-colors"
-                    >
-                      Connect with Shen Chen
+                 <div className="flex items-start gap-6">
+                    <span className="text-xs font-bold uppercase tracking-widest text-neutral-600 w-24 pt-1">Social</span>
+                    <a href={content.linkedin} target="_blank" rel="noopener" className="text-neutral-300 font-light hover:text-white transition-colors">
+                        LinkedIn
                     </a>
-                  </div>
-                </div>
+                 </div>
               )}
             </div>
           </div>
 
-          {/* Simple Contact Form */}
-          <div className="bg-neutral-50 p-8 md:p-12">
-            <form className="space-y-6">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">{content.formName}</label>
-                <input type="text" className="w-full bg-white px-4 py-3 border-b-2 border-neutral-200 focus:border-neutral-900 outline-none transition-colors" />
+          {/* Minimal Form */}
+          <div className="bg-[#2A2A28] p-10 rounded-sm">
+            <form className="space-y-8">
+              <div className="grid grid-cols-1 gap-8">
+                  <div className="relative">
+                    <input type="text" placeholder={content.formName} className="w-full bg-transparent border-b border-neutral-600 py-3 text-white focus:border-white outline-none transition-colors placeholder-neutral-600" />
+                  </div>
+                  <div className="relative">
+                    <input type="text" placeholder={content.formEmail} className="w-full bg-transparent border-b border-neutral-600 py-3 text-white focus:border-white outline-none transition-colors placeholder-neutral-600" />
+                  </div>
               </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">{content.formEmail}</label>
-                <input type="text" className="w-full bg-white px-4 py-3 border-b-2 border-neutral-200 focus:border-neutral-900 outline-none transition-colors" />
+              <div className="relative">
+                <textarea rows={3} placeholder={content.formMessage} className="w-full bg-transparent border-b border-neutral-600 py-3 text-white focus:border-white outline-none transition-colors resize-none placeholder-neutral-600"></textarea>
               </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">{content.formMessage}</label>
-                <textarea rows={4} className="w-full bg-white px-4 py-3 border-b-2 border-neutral-200 focus:border-neutral-900 outline-none transition-colors resize-none"></textarea>
-              </div>
-              <button type="submit" className="w-full bg-neutral-900 text-white font-medium py-4 uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+              <button type="submit" className="bg-white text-neutral-900 px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-neutral-200 transition-colors w-full md:w-auto">
                 {content.formSubmit}
               </button>
             </form>
           </div>
         </div>
 
-        <div className="border-t border-neutral-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-400 uppercase tracking-wider">
-          <p>&copy; {new Date().getFullYear()} CJ Studio. All rights reserved.</p>
+        <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-neutral-600 uppercase tracking-widest">
+          <p>&copy; {new Date().getFullYear()} CJ Studio.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-             <a href="#" className="hover:text-neutral-600">chengjiadesign.com</a>
-             <span>Privacy</span>
-             <span>Terms</span>
+             <span>Privacy Policy</span>
           </div>
         </div>
       </div>

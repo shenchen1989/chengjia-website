@@ -10,44 +10,51 @@ interface ServicesProps {
 const Services: React.FC<ServicesProps> = ({ content }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Restaurant': return <Utensils className="w-6 h-6 text-neutral-800" />;
-      case 'Home': return <Home className="w-6 h-6 text-neutral-800" />;
-      case 'Cabinet': return <Box className="w-6 h-6 text-neutral-800" />;
-      case 'Commercial': return <Briefcase className="w-6 h-6 text-neutral-800" />;
-      case 'Construction': return <HardHat className="w-6 h-6 text-neutral-800" />;
-      case 'Furniture': return <Armchair className="w-6 h-6 text-neutral-800" />;
-      case 'Branding': return <Palette className="w-6 h-6 text-neutral-800" />;
-      default: return <Home className="w-6 h-6 text-neutral-800" />;
+      case 'Restaurant': return <Utensils className="w-5 h-5" />;
+      case 'Home': return <Home className="w-5 h-5" />;
+      case 'Cabinet': return <Box className="w-5 h-5" />;
+      case 'Commercial': return <Briefcase className="w-5 h-5" />;
+      case 'Construction': return <HardHat className="w-5 h-5" />;
+      case 'Furniture': return <Armchair className="w-5 h-5" />;
+      case 'Branding': return <Palette className="w-5 h-5" />;
+      default: return <Home className="w-5 h-5" />;
     }
   };
 
   return (
-    <section id="services" className="py-24 bg-neutral-50 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-20 border-b border-neutral-200 pb-8">
-          <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-4">
-            {content.title}
-          </h2>
-          <p className="text-neutral-500 font-light text-lg">
-            {content.subtitle}
-          </p>
-        </div>
+    <section id="services" className="py-32 bg-transparent relative">
+      {/* Optional: Add a subtle local block to differentiate section but keep it open */}
+      <div className="absolute inset-0 bg-morandi-200/20 -z-10 skew-y-1"></div>
 
-        {/* Grid layout adapts for 6 items now */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-          {content.items.map((item, index) => (
-            <div key={index} className="group flex flex-col items-start border-l-2 border-transparent hover:border-neutral-900 pl-0 hover:pl-6 transition-all duration-300">
-              <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
-                {getIcon(item.icon)}
-              </div>
-              <h3 className="text-xl font-medium text-neutral-900 mb-4">
-                {item.title}
-              </h3>
-              <p className="text-neutral-600 leading-relaxed font-light">
-                {item.description}
-              </p>
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            {/* Left Title Area */}
+            <div className="lg:col-span-4">
+                <h2 className="text-4xl font-serif text-morandi-900 mb-6">
+                    {content.title}
+                </h2>
+                <p className="text-morandi-500 font-light text-lg leading-relaxed max-w-xs">
+                    {content.subtitle}
+                </p>
             </div>
-          ))}
+
+            {/* Right List Area */}
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
+                {content.items.map((item, index) => (
+                    <div key={index} className="group flex flex-col items-start">
+                        <div className="mb-6 text-morandi-400 group-hover:text-morandi-900 transition-colors">
+                            {getIcon(item.icon)}
+                        </div>
+                        <h3 className="text-xl font-serif font-medium text-morandi-900 mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-morandi-300">
+                            {item.title}
+                        </h3>
+                        <p className="text-morandi-500 text-sm leading-7 font-light">
+                            {item.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
         </div>
       </div>
     </section>

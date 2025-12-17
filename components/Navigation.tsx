@@ -21,8 +21,8 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
 
   const navLinks = [
     { label: content.home, href: '#home' },
+    { label: content.portfolio, href: '#portfolio' }, 
     { label: content.services, href: '#services' },
-    { label: content.portfolio, href: '#portfolio' },
     { label: content.about, href: '#about' },
     { label: content.contact, href: '#contact' },
   ];
@@ -34,91 +34,111 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24"> {/* Increased height from h-20 to h-24 */}
-          
-          {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
-            <a href="#home" onClick={handleLogoClick} className="flex items-center gap-4 group">
-              {/* Increased Logo Size */}
-              <div className="relative h-14 w-14"> 
-                   <Logo className="h-full w-full text-neutral-900 group-hover:opacity-80 transition-opacity" />
+    <>
+      {/* ================= DESKTOP SIDEBAR ================= */}
+      <nav className="hidden md:flex fixed top-0 left-0 h-screen w-52 bg-morandi-100/80 backdrop-blur-sm border-r border-morandi-200 z-50 flex-col justify-between py-10 px-6">
+        
+        {/* Top: Logo */}
+        <div>
+            <a href="#home" onClick={handleLogoClick} className="block group mb-14">
+              <div className="w-12 h-12 mb-5 opacity-90 hover:opacity-100 transition-opacity"> 
+                   <Logo className="w-full h-full text-morandi-900" />
               </div>
-              <div className="flex flex-col justify-center">
-                {/* Increased Font Size */}
-                <span className="font-serif font-bold text-3xl tracking-tight text-neutral-900 leading-none">
+              <div className="flex flex-col">
+                <span className="font-sans font-bold text-lg tracking-tight text-morandi-900 leading-none">
                     {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
                 </span>
-                <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 mt-1 font-sans">Interior & Design</span>
+                <span className="text-[9px] uppercase tracking-[0.2em] text-morandi-500 mt-2 font-medium">Interior & Design</span>
               </div>
             </a>
-          </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => {
-                    onHomeClick();
-                }}
-                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200 text-sm font-medium tracking-wide"
-              >
-                {link.label}
-              </a>
-            ))}
-            
-            <button
+            {/* Middle: Links */}
+            <div className="flex flex-col space-y-5">
+                {navLinks.map((link) => (
+                <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => {
+                        onHomeClick();
+                    }}
+                    className="text-morandi-500 hover:text-morandi-900 transition-all duration-300 text-xs font-bold tracking-[0.15em] uppercase hover:pl-1"
+                >
+                    {link.label}
+                </a>
+                ))}
+            </div>
+        </div>
+
+        {/* Bottom: Lang & Info */}
+        <div>
+             <button
               onClick={toggleLang}
-              className="flex items-center gap-1 px-3 py-1 rounded-sm border border-neutral-200 hover:bg-neutral-50 transition-colors text-xs uppercase tracking-wider text-neutral-600"
+              className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-morandi-400 hover:text-morandi-800 transition-colors mb-6"
             >
               <Globe size={12} />
-              <span>{lang === 'zh' ? 'EN' : '中文'}</span>
+              <span>{lang === 'zh' ? 'Switch to English' : '中文界面'}</span>
             </button>
-          </div>
+            <div className="text-[9px] text-morandi-300 leading-relaxed font-sans">
+                &copy; {new Date().getFullYear()} CJ Studio.<br/>
+                All rights reserved.
+            </div>
+        </div>
+      </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+      {/* ================= MOBILE TOPBAR ================= */}
+      <nav className="md:hidden sticky top-0 z-50 bg-morandi-100/95 backdrop-blur-md border-b border-morandi-200">
+        <div className="px-6 h-16 flex justify-between items-center">
+            {/* Logo */}
+            <a href="#home" onClick={handleLogoClick} className="flex items-center gap-3">
+               <div className="h-8 w-8"> 
+                   <Logo className="h-full w-full text-morandi-900" />
+               </div>
+               <span className="font-sans font-bold text-lg text-morandi-900">
+                    {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
+               </span>
+            </a>
+
+            {/* Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-neutral-600 hover:text-neutral-900 focus:outline-none"
+              className="text-morandi-900 focus:outline-none p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div>
         </div>
-      </div>
 
-      {/* Mobile Menu Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-neutral-100 absolute w-full shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => {
-                    setIsOpen(false);
-                    onHomeClick();
-                }}
-                className="block px-3 py-4 text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 border-b border-neutral-50"
-              >
-                {link.label}
-              </a>
-            ))}
-            <button
-              onClick={toggleLang}
-              className="w-full text-left px-3 py-4 text-base font-medium text-neutral-600 hover:bg-neutral-50 flex items-center gap-2"
-            >
-              <Globe size={18} />
-              {lang === 'zh' ? 'Switch to English' : '切换到中文'}
-            </button>
-          </div>
-        </div>
-      )}
-    </nav>
+        {/* Mobile Dropdown */}
+        {isOpen && (
+            <div className="absolute top-16 left-0 w-full bg-morandi-100 border-b border-morandi-200 shadow-xl h-screen flex flex-col p-8 animate-fade-in">
+                <div className="flex flex-col space-y-8 mt-8">
+                    {navLinks.map((link) => (
+                    <a
+                        key={link.label}
+                        href={link.href}
+                        onClick={() => {
+                            setIsOpen(false);
+                            onHomeClick();
+                        }}
+                        className="text-2xl font-sans font-medium text-morandi-900"
+                    >
+                        {link.label}
+                    </a>
+                    ))}
+                </div>
+                
+                <div className="mt-auto mb-20 border-t border-morandi-200 pt-8">
+                     <button
+                        onClick={toggleLang}
+                        className="flex items-center gap-2 text-sm uppercase tracking-widest text-morandi-500"
+                        >
+                        <Globe size={16} />
+                        <span>{lang === 'zh' ? 'English' : '中文'}</span>
+                    </button>
+                </div>
+            </div>
+        )}
+      </nav>
+    </>
   );
 };
 
