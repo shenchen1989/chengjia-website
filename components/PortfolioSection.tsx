@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { Content, PortfolioItem, Language } from '../types';
 import { PORTFOLIO_ITEMS } from '../constants';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import WatermarkOverlay from './WatermarkOverlay';
 
 interface PortfolioSectionProps {
   content: Content['portfolio'];
@@ -85,13 +86,14 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
                         className="flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start group cursor-pointer"
                         onClick={() => onProjectClick(item)}
                     >
-                      <div className="relative overflow-hidden aspect-[4/3] mb-5 bg-neutral-100 border border-neutral-100">
+                      <div className="relative overflow-hidden aspect-[4/3] mb-5 bg-neutral-100 border border-neutral-100 rounded-sm">
                           <img
                           src={item.imageUrl}
                           alt={displayTitle}
                           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                           loading="lazy"
                           />
+                          <WatermarkOverlay />
                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                               <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-sm text-xs uppercase tracking-widest font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-neutral-900">
                                   {content.viewProject}
