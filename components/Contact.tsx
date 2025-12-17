@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Content, Language } from '../types';
-import { Mail, Phone, MapPin, MessageCircle, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle, Globe, Linkedin } from 'lucide-react';
 import Logo from './Logo';
 
 interface ContactProps {
@@ -18,9 +18,11 @@ const Contact: React.FC<ContactProps> = ({ content, lang }) => {
           {/* Contact Info */}
           <div>
             <div className="mb-10">
-                <div className="flex items-center gap-3 mb-6">
-                    <Logo className="h-8 w-8 text-neutral-900" />
-                    <span className="font-serif text-2xl font-bold tracking-tight text-neutral-900">
+                <div className="flex items-center gap-4 mb-6">
+                    {/* Increased Logo Size */}
+                    <Logo className="h-12 w-12 text-neutral-900" />
+                    {/* Increased Text Size */}
+                    <span className="font-serif text-4xl font-bold tracking-tight text-neutral-900">
                         {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
                     </span>
                 </div>
@@ -74,6 +76,23 @@ const Contact: React.FC<ContactProps> = ({ content, lang }) => {
                   </a>
                 </div>
               </div>
+
+              {content.linkedin && (
+                <div className="flex items-start gap-6 group">
+                  <Linkedin className="text-neutral-400 mt-1" size={20} />
+                  <div>
+                    <h4 className="font-medium text-neutral-900 text-sm uppercase tracking-wider mb-1">LinkedIn</h4>
+                    <a 
+                      href={content.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-neutral-600 font-light hover:text-neutral-900 hover:underline transition-colors"
+                    >
+                      Connect with Shen Chen
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 

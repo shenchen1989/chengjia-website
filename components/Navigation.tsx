@@ -36,19 +36,21 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24"> {/* Increased height from h-20 to h-24 */}
           
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#home" onClick={handleLogoClick} className="flex items-center gap-3 group">
-              <div className="relative h-10 w-10">
+            <a href="#home" onClick={handleLogoClick} className="flex items-center gap-4 group">
+              {/* Increased Logo Size */}
+              <div className="relative h-14 w-14"> 
                    <Logo className="h-full w-full text-neutral-900 group-hover:opacity-80 transition-opacity" />
               </div>
               <div className="flex flex-col justify-center">
-                <span className="font-serif font-bold text-xl tracking-tight text-neutral-900 leading-none">
+                {/* Increased Font Size */}
+                <span className="font-serif font-bold text-3xl tracking-tight text-neutral-900 leading-none">
                     {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 mt-1 font-sans">Interior & Design</span>
+                <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 mt-1 font-sans">Interior & Design</span>
               </div>
             </a>
           </div>
