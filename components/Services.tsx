@@ -43,10 +43,11 @@ const Services: React.FC<ServicesProps> = ({ content }) => {
             <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
                 {content.items.map((item, index) => (
                     <div key={index} className="group flex flex-col items-start">
-                        <div className="mb-6 text-morandi-400 group-hover:text-morandi-900 transition-colors">
+                        {/* Changed text-morandi-400 to text-accent-red for visual emphasis */}
+                        <div className="mb-6 text-accent-red group-hover:scale-110 transition-transform duration-300">
                             {getIcon(item.icon)}
                         </div>
-                        <h3 className="text-xl font-serif font-medium text-morandi-900 mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-morandi-300">
+                        <h3 className="text-xl font-serif font-medium text-morandi-900 mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-accent-red/30">
                             {item.title}
                         </h3>
                         <p className="text-morandi-500 text-sm leading-7 font-light">

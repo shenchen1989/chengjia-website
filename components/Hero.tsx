@@ -32,9 +32,11 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
                 {content.title}
             </h1>
             
-            <p className="text-lg md:text-xl text-morandi-600 mb-12 max-w-lg leading-relaxed font-light font-sans">
-                {content.subtitle}
-            </p>
+            {/* Enabled dangerouslySetInnerHTML for custom highlighting in subtitle */}
+            <p 
+                className="text-lg md:text-xl text-morandi-600 mb-12 max-w-lg leading-relaxed font-light font-sans"
+                dangerouslySetInnerHTML={{ __html: content.subtitle }}
+            ></p>
 
             <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                 <div className="flex items-center gap-3 text-morandi-400 text-sm font-medium tracking-wide uppercase">
