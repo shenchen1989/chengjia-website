@@ -34,7 +34,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#fafaf9]/90 backdrop-blur-md border-b border-stone-200">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
@@ -42,11 +42,13 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
           <div className="flex-shrink-0 flex items-center">
             <a href="#home" onClick={handleLogoClick} className="flex items-center gap-3 group">
               <div className="relative h-10 w-10">
-                   <Logo className="h-full w-full text-stone-900 group-hover:opacity-80 transition-opacity" />
+                   <Logo className="h-full w-full text-neutral-900 group-hover:opacity-80 transition-opacity" />
               </div>
               <div className="flex flex-col justify-center">
-                <span className="font-serif font-semibold text-xl tracking-tight text-stone-900 leading-none">CJ Studio</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-stone-500 mt-1">Interior & Design</span>
+                <span className="font-serif font-bold text-xl tracking-tight text-neutral-900 leading-none">
+                    {lang === 'zh' ? '诚嘉设计' : 'CJ Studio'}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 mt-1 font-sans">Interior & Design</span>
               </div>
             </a>
           </div>
@@ -60,7 +62,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
                 onClick={(e) => {
                     onHomeClick();
                 }}
-                className="text-stone-500 hover:text-stone-900 transition-colors duration-200 text-sm font-medium tracking-wide"
+                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200 text-sm font-medium tracking-wide"
               >
                 {link.label}
               </a>
@@ -68,7 +70,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
             
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1 px-3 py-1 rounded-sm border border-stone-200 hover:bg-stone-100 transition-colors text-xs uppercase tracking-wider text-stone-600"
+              className="flex items-center gap-1 px-3 py-1 rounded-sm border border-neutral-200 hover:bg-neutral-50 transition-colors text-xs uppercase tracking-wider text-neutral-600"
             >
               <Globe size={12} />
               <span>{lang === 'zh' ? 'EN' : '中文'}</span>
@@ -79,7 +81,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-stone-600 hover:text-stone-900 focus:outline-none"
+              className="text-neutral-600 hover:text-neutral-900 focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -89,7 +91,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#fafaf9] border-t border-stone-100 absolute w-full shadow-lg">
+        <div className="md:hidden bg-white border-t border-neutral-100 absolute w-full shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => (
               <a
@@ -99,14 +101,14 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
                     setIsOpen(false);
                     onHomeClick();
                 }}
-                className="block px-3 py-4 text-base font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 border-b border-stone-100"
+                className="block px-3 py-4 text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 border-b border-neutral-50"
               >
                 {link.label}
               </a>
             ))}
             <button
               onClick={toggleLang}
-              className="w-full text-left px-3 py-4 text-base font-medium text-stone-600 hover:bg-stone-100 flex items-center gap-2"
+              className="w-full text-left px-3 py-4 text-base font-medium text-neutral-600 hover:bg-neutral-50 flex items-center gap-2"
             >
               <Globe size={18} />
               {lang === 'zh' ? 'Switch to English' : '切换到中文'}

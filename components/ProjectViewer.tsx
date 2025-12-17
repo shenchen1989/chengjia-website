@@ -26,7 +26,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
         {/* Navigation */}
         <button 
             onClick={onBack}
-            className="group flex items-center gap-2 text-stone-500 hover:text-stone-900 transition-colors mb-12 text-sm font-medium tracking-wide uppercase"
+            className="group flex items-center gap-2 text-neutral-500 hover:text-neutral-900 transition-colors mb-12 text-sm font-medium tracking-wide uppercase"
         >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             {content.backToHome}
@@ -35,36 +35,36 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-                <h1 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-serif font-medium text-neutral-900 mb-6 leading-tight">
                     {displayTitle}
                 </h1>
-                <p className="text-stone-600 leading-relaxed text-lg font-light">
+                <p className="text-neutral-600 leading-relaxed text-lg font-light">
                     {project.description || "Project description coming soon."}
                 </p>
             </div>
             
-            <div className="bg-[#fafaf9] p-8 h-fit border border-stone-100">
+            <div className="bg-neutral-50 p-8 h-fit border border-neutral-100">
                 <div className="space-y-6">
                     <div>
-                        <div className="flex items-center gap-2 text-stone-400 mb-1 text-xs uppercase tracking-widest">
+                        <div className="flex items-center gap-2 text-neutral-400 mb-1 text-xs uppercase tracking-widest">
                             <Tag size={14} /> Category
                         </div>
-                        <div className="text-stone-900 font-medium">{project.category}</div>
+                        <div className="text-neutral-900 font-medium font-serif text-lg">{project.category}</div>
                     </div>
                     {project.location && (
                         <div>
-                            <div className="flex items-center gap-2 text-stone-400 mb-1 text-xs uppercase tracking-widest">
+                            <div className="flex items-center gap-2 text-neutral-400 mb-1 text-xs uppercase tracking-widest">
                                 <MapPin size={14} /> Location
                             </div>
-                            <div className="text-stone-900 font-medium">{project.location}</div>
+                            <div className="text-neutral-900 font-medium font-serif text-lg">{project.location}</div>
                         </div>
                     )}
                     {project.year && (
                         <div>
-                            <div className="flex items-center gap-2 text-stone-400 mb-1 text-xs uppercase tracking-widest">
+                            <div className="flex items-center gap-2 text-neutral-400 mb-1 text-xs uppercase tracking-widest">
                                 <Calendar size={14} /> Year
                             </div>
-                            <div className="text-stone-900 font-medium">{project.year}</div>
+                            <div className="text-neutral-900 font-medium font-serif text-lg">{project.year}</div>
                         </div>
                     )}
                 </div>
@@ -74,7 +74,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
         {/* Gallery */}
         <div className="space-y-12">
             {/* Main Image */}
-            <div className="w-full aspect-video bg-stone-100 overflow-hidden">
+            <div className="w-full aspect-video bg-neutral-100 overflow-hidden shadow-sm">
                 <img 
                     src={project.imageUrl} 
                     alt={displayTitle} 
@@ -86,7 +86,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
             {project.gallery && project.gallery.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {project.gallery.slice(1).map((img, index) => (
-                        <div key={index} className="w-full aspect-[4/3] bg-stone-100 overflow-hidden group">
+                        <div key={index} className="w-full aspect-[4/3] bg-neutral-100 overflow-hidden group shadow-sm">
                             <img 
                                 src={img} 
                                 alt={`${displayTitle} detail ${index + 1}`} 
