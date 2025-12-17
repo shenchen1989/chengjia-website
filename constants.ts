@@ -24,7 +24,7 @@ export const CONTENT: Record<string, Content> = {
     },
     about: {
       title: "关于 CJ Studio (诚嘉设计)",
-      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维，由双核团队联合主理。合伙人 徐晨 (Chen Xu) 常驻丹麦，作为一名活跃于欧洲舞台的男高音歌唱家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
+      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维，由双核团队联合主理。市场主理人 徐晨 (Chen Xu) 常驻丹麦，作为一名活跃于欧洲舞台的男高音歌唱家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
       description2: "设计主理人 沈忱 (Shen Chen) 拥有13年行业履历，持有意大利 Unina DBE 建筑环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过2年一线木工与全屋定制安装，积累了极扎实的落地工艺经验；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到“懂设计、懂工艺、懂落地”，为您提供高品质的一站式交付。",
       stats: {
         years: "13+",
@@ -96,7 +96,7 @@ export const CONTENT: Record<string, Content> = {
     },
     about: {
       title: "About CJ Studio",
-      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Partner Chen Xu, based in Denmark, is a distinguished Tenor whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
+      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Market Principal Chen Xu, based in Denmark, is a distinguished Tenor whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
       description2: "Design Principal Shen Chen brings 13 years of diverse international experience and holds a Master's degree in Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he spent 2 years in New Zealand as a hands-on carpenter specializing in custom joinery, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true 'Design-to-Reality' execution.",
       stats: {
         years: "13+",
