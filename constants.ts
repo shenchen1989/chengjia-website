@@ -35,22 +35,22 @@ export const CONTENT: Record<string, Content> = {
     },
     services: {
       title: "我们的服务",
-      subtitle: "设计只是开始，落地才是关键",
+      subtitle: "提供概念设计、平面布局、全场景三维模型模拟、效果图渲染、施工图深化及装修预算规划。",
       items: [
         {
-          title: "餐饮商业装修",
-          description: "中餐馆、奶茶店、亚超设计。我们懂商业动线，懂卫生局要求，更懂如何用有限预算打造高级感，帮您快速开业。",
-          icon: "Restaurant",
+          title: "商业空间全案设计",
+          description: "涵盖餐厅、酒吧、零售店铺、办公空间、理发店及美甲店。我们提供专业的商业动线规划与卫生局合规设计，助力您快速开业。",
+          icon: "Commercial",
         },
         {
-          title: "全屋定制与软装",
-          description: "提供橱柜、衣柜等全屋定制设计与资源对接。解决北欧家具昂贵的问题，从国内/本地优选供应链，完美适配您的空间。",
-          icon: "Cabinet",
-        },
-        {
-          title: "住宅翻新改造",
-          description: "老房翻新、厨房改造、卫生间升级。我们提供详细的施工图纸，即使是请当地工人，也能确保按图施工，不走弯路。",
+          title: "住宅与别墅室内设计",
+          description: "专注别墅、大平层及老房改造。提供从平面方案规划到全场景3D模型模拟的完整设计咨询服务，包含施工图深化与详细预算清单。",
           icon: "Home",
+        },
+        {
+          title: "软装搭配与高性价比改造",
+          description: "针对预算有限的客户，提供基于宜家(IKEA)、JYSK等品牌的家具选品与搭配方案；同时也提供高端全屋定制资源，丰俭由人。",
+          icon: "Cabinet",
         },
       ],
     },
@@ -101,22 +101,22 @@ export const CONTENT: Record<string, Content> = {
     },
     services: {
       title: "Services",
-      subtitle: "Practical solutions from concept to completion",
+      subtitle: "Concept Design, Layout Planning, 3D Modeling, Rendering, Construction Drawings & Budgeting.",
       items: [
         {
-          title: "Restaurant & Retail",
-          description: "Design for Asian restaurants and bubble tea shops. We optimize workflows, ensure hygiene compliance, and control budgets to help you open faster.",
-          icon: "Restaurant",
+          title: "Commercial Space Design",
+          description: "Restaurants, bars, retail shops, offices, hair & nail salons. We optimize workflows and hygiene compliance to help you open your business faster.",
+          icon: "Commercial",
         },
         {
-          title: "Custom Cabinetry",
-          description: "Full-house customization (Kitchens, Wardrobes). We design and source high-quality joinery to fit your space perfectly, offering a better value than standard local options.",
-          icon: "Cabinet",
-        },
-        {
-          title: "Residential Renovation",
-          description: "Old apartment refurbishment, kitchen & bath remodeling. We provide precise construction drawings to ensure local contractors build exactly what you want.",
+          title: "Residential & Villa Design",
+          description: "Specialized in villas and apartments. We provide full design consulting: layout planning, 3D spatial simulation, construction drawings, and detailed budgeting.",
           icon: "Home",
+        },
+        {
+          title: "Styling & Budget Solutions",
+          description: "From budget-friendly makeovers using IKEA/JYSK curation to high-end custom joinery. We provide soft furnishing advice to fit your specific budget.",
+          icon: "Cabinet",
         },
       ],
     },
