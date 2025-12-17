@@ -73,9 +73,10 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
         <div>
              <button
               onClick={toggleLang}
-              className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-morandi-400 hover:text-morandi-800 transition-colors mb-6"
+              className="flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-accent-red hover:opacity-80 transition-opacity mb-8"
             >
-              <Globe size={12} />
+              {/* Increased size and stroke width for better visibility */}
+              <Globe size={22} strokeWidth={2.5} />
               <span>{lang === 'zh' ? 'Switch to English' : '中文界面'}</span>
             </button>
             <div className="text-[9px] text-morandi-300 leading-relaxed font-sans">
@@ -129,10 +130,10 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
                 <div className="mt-auto mb-20 border-t border-morandi-200 pt-8">
                      <button
                         onClick={toggleLang}
-                        className="flex items-center gap-2 text-sm uppercase tracking-widest text-morandi-500"
+                        className="flex items-center gap-3 text-base font-bold uppercase tracking-widest text-accent-red"
                         >
-                        <Globe size={16} />
-                        <span>{lang === 'zh' ? 'English' : '中文'}</span>
+                        <Globe size={24} strokeWidth={2.5} />
+                        <span>{lang === 'zh' ? 'Switch to English' : '中文界面'}</span>
                     </button>
                 </div>
             </div>
