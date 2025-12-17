@@ -24,8 +24,8 @@ export const CONTENT: Record<string, Content> = {
     },
     about: {
       title: "关于 CJ Studio (诚嘉设计)",
-      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维，由双核团队联合主理。设计主理人 沈忱 (Shen Chen) 拥有14年行业履历，持有意大利 Unina DBE 建筑设计环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过2年一线木工与全屋定制安装，积累了极扎实的落地工艺经验；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到“懂设计、懂工艺、懂落地”，为您提供高品质的一站式交付。",
-      description2: "市场主理人 徐晨 (Chen Xu) 常驻丹麦，作为一名活跃于欧洲舞台的男高音歌唱家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
+      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维。设计主理人 沈忱 (Shen Chen) 拥有14年行业履历，持有意大利 Unina DBE 建筑设计环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过一线木作与全屋定制生产与安装，了解全木结构住宅施工工艺；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到“懂设计、懂工艺、懂落地”，为您提供高品质的一站式交付。",
+      description2: "市场主理人 徐晨 (Chen Xu) 常驻丹麦，作为一名活跃于欧洲的艺术家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
       stats: {
         years: "14+",
         yearsLabel: "从业经验",
@@ -106,8 +106,8 @@ export const CONTENT: Record<string, Content> = {
     },
     about: {
       title: "About CJ Studio",
-      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Design Principal Shen Chen brings 14 years of diverse international experience and holds a Master's degree in Architecture Design and Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he spent 2 years in New Zealand as a hands-on carpenter specializing in custom joinery, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true 'Design-to-Reality' execution.",
-      description2: "Market Principal Chen Xu, based in Denmark, is a distinguished Tenor whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
+      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Design Principal Shen Chen brings 14 years of diverse international experience and holds a Master's degree in Architecture Design and Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he worked in New Zealand in frontline woodworking and custom furniture production & installation, mastering timber frame construction techniques, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true 'Design-to-Reality' execution.",
+      description2: "Market Principal Chen Xu, based in Denmark, is a distinguished Artist whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
       stats: {
         years: "14+",
         yearsLabel: "Years Exp.",
@@ -177,13 +177,14 @@ export const CONTENT: Record<string, Content> = {
 // 🟢 案例列表
 // =================================================================
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  // 1. Villa in Turin (New Replacement)
+  // 1. Villa in Turin
   {
     id: 11,
     title: "Villa in Turin",
     title_zh: "都灵别墅",
     category: "Residential",
-    description: "A luxurious residential renovation project in Turin. The design features a spacious open-plan layout, modern Italian furniture integration, and sophisticated lighting design that enhances the architectural details. From the grand living room to the cozy bedrooms, every space is curated for comfort and style.",
+    description: "A mid-to-high-end residential renovation in Turin. Avoiding ostentatious luxury, the design focuses on modern practicality and comfort. We optimized the spatial layout and lighting to create a simple, elegant, and warm atmosphere tailored for daily living.",
+    description_zh: "位于都灵的住宅翻新项目，定位为中高端现代居所。设计摒弃了繁复奢华的堆砌，转而专注于现代生活的舒适性与实用机能。通过对空间布局的梳理与光影氛围的营造，打造出一个简约、雅致且充满生活温度的家。",
     location: "Turin, Italy",
     year: "2024",
     imageUrl: "https://i.postimg.cc/jdMVRbVV/GF场景_2.png",
@@ -216,14 +217,15 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/vBrjkRLY/GF场景_9.png"
     ]
   },
-  // 2. Villa in Tuscany
+  // 2. Villa in Tuscany (Prato)
   {
     id: 6,
     title: "Villa in Tuscany",
     title_zh: "托斯卡纳别墅",
     category: "Residential",
-    description: "A comprehensive villa design in Tuscany, blending classic Italian architectural elements with modern living standards. The project includes detailed floor plans and 3D renderings of both interior and exterior spaces.",
-    location: "Tuscany, Italy",
+    description: "A newly constructed timber-frame villa in Prato. While retaining the original structural integrity, we elevated the standard developer finishing through refined interior design and soft furnishings. The project transforms a standardized architectural shell into a bespoke living space with unique aesthetic quality.",
+    description_zh: "位于普拉托（Prato）的一栋新建木结构别墅。项目在保留原建筑主体木结构的基础上，突破了意大利标准交付的普通装修模式。我们通过精细化的室内设计干预与软装陈设，重新定义了空间的审美与质感，将一个标准化的建筑外壳转化为具有独特生活格调的居住空间。",
+    location: "Prato, Italy",
     year: "2024",
     imageUrl: "https://i.postimg.cc/KYhT0C0f/base_1.png",
     gallery: [
@@ -259,7 +261,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/W3Whcy74/base_9.png"
     ]
   },
-  // 3. Zen Sushi Restaurant (Swapped with Sushi Nami)
+  // 3. Zen Sushi Restaurant
   {
     id: 3,
     title: "Zen Sushi Restaurant",
@@ -290,7 +292,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: "Udine Steakhouse",
     title_zh: "Udine 牛排馆",
     category: "Commercial",
-    description: "A comprehensive interior design for a modern steakhouse in Udine. The project features a robust spatial layout including detailed isometric views and floor plans, ensuring a seamless flow between the kitchen and dining areas. The design utilizes warm tones and strategic lighting to create an inviting dining experience.",
+    description: "A comprehensive interior design for a modern steakhouse in Udine. The project features a robust spatial layout including detailed isometric views and floor plans, ensuring a seamless flow between the kitchen and dining areas.",
     location: "Udine, Italy",
     year: "2023",
     imageUrl: "https://i.postimg.cc/Hsf0G34m/场景_1.png",
@@ -307,7 +309,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/jdZ5Pj2v/plan.jpg"
     ]
   },
-  // 5. Sushi Nami (Swapped with Zen Sushi)
+  // 5. Sushi Nami
   {
     id: 1,
     title: "Sushi Nami",
@@ -357,7 +359,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=1470&auto=format&fit=crop"
     ]
   },
-  // Added placeholder projects to demonstrate slider functionality
   {
     id: 7,
     title: "Nordic Coffee House",

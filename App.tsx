@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-morandi-100 text-morandi-800 flex flex-col md:flex-row relative">
+    <div className="min-h-screen bg-[#F9F9F8] text-morandi-800 flex flex-col md:flex-row relative">
       
       {/* 
           Compositional Background Layers 
@@ -56,13 +56,19 @@ function App() {
       */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
          {/* Warm Block (Right) - Lighter */}
-         <div className="absolute top-0 right-0 w-[45%] h-full bg-morandi-200/30 hidden md:block"></div>
+         <div className="absolute top-0 right-0 w-[45%] h-full bg-morandi-200/20 hidden md:block"></div>
          
          {/* Warm Horizontal Strip (Bottom Left) */}
-         <div className="absolute bottom-[5%] left-0 w-[25%] h-[12%] bg-morandi-200/40"></div>
+         <div className="absolute bottom-[5%] left-0 w-[25%] h-[12%] bg-morandi-200/30"></div>
          
-         {/* NEW: Cool Accent Block (Top Left - Subtle Blue/Grey) */}
+         {/* Cool Accent Block (Top Left - Subtle Blue/Grey) */}
          <div className="absolute top-[10%] left-[5%] w-[12%] h-[20%] bg-[#E8ECEF]/40 mix-blend-multiply hidden md:block"></div>
+
+         {/* NEW: Warm Accent Red Block (Middle Right - Very subtle touch of color) */}
+         <div className="absolute top-[40%] right-[0] w-[20%] h-[30%] bg-accent-red/5 mix-blend-multiply blur-3xl hidden md:block"></div>
+
+         {/* Additional VERY subtle cool block (Bottom Right - Compositional Balance) */}
+         <div className="absolute bottom-[20%] right-[10%] w-[5%] h-[5%] bg-[#DAE0E5]/30 hidden md:block mix-blend-multiply"></div>
          
          {/* Thin vertical line axis */}
          <div className="absolute top-0 left-[24%] w-[1px] h-full bg-morandi-300/20 hidden md:block"></div>
