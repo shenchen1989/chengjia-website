@@ -12,6 +12,7 @@ import { CONTENT } from './constants';
 import { Language, PortfolioItem } from './types';
 
 function App() {
+  // Default to Chinese as requested
   const [lang, setLang] = useState<Language>('zh');
   const [isAdmin, setIsAdmin] = useState(false);
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
@@ -47,7 +48,27 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900">
+    <div className="min-h-screen bg-morandi-100 text-morandi-800 flex flex-col md:flex-row relative">
+      
+      {/* 
+          Compositional Background Layers 
+          Fixed position so they create depth while scrolling 
+      */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+         {/* Warm Block (Right) - Lighter */}
+         <div className="absolute top-0 right-0 w-[45%] h-full bg-morandi-200/30 hidden md:block"></div>
+         
+         {/* Warm Horizontal Strip (Bottom Left) */}
+         <div className="absolute bottom-[5%] left-0 w-[25%] h-[12%] bg-morandi-200/40"></div>
+         
+         {/* NEW: Cool Accent Block (Top Left - Subtle Blue/Grey) */}
+         <div className="absolute top-[10%] left-[5%] w-[12%] h-[20%] bg-[#E8ECEF]/40 mix-blend-multiply hidden md:block"></div>
+         
+         {/* Thin vertical line axis */}
+         <div className="absolute top-0 left-[24%] w-[1px] h-full bg-morandi-300/20 hidden md:block"></div>
+      </div>
+
+      {/* Navigation - Sidebar on Desktop, Topbar on Mobile */}
       <Navigation 
         lang={lang} 
         setLang={setLang} 
@@ -55,7 +76,8 @@ function App() {
         onHomeClick={handleBackToHome}
       />
       
-      <main>
+      {/* Main Content Area - shifts right on desktop */}
+      <main className="flex-1 w-full md:ml-52 transition-all duration-300 relative z-10">
         {selectedProject ? (
           <ProjectViewer 
             project={selectedProject} 
@@ -66,13 +88,13 @@ function App() {
         ) : (
           <>
             <Hero content={content.hero} />
-            <Services content={content.services} />
-            <About content={content.about} />
             <PortfolioSection 
               content={content.portfolio} 
               onProjectClick={handleProjectClick} 
               lang={lang}
             />
+            <Services content={content.services} />
+            <About content={content.about} />
             <Contact content={content.contact} lang={lang} />
           </>
         )}

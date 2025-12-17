@@ -19,16 +19,16 @@ export const CONTENT: Record<string, Content> = {
       title: "海外华人空间的理想构建者",
       subtitle: "从设计图纸到落地交付。CJ Studio 诚嘉设计专注为欧洲及中国的客户提供高品质空间解决方案。我们不只是施工方，更是懂工艺的设计事务所，一切只为设计效果的完美呈现。",
       cta: "获取免费报价",
-      experience: "13年设计经验 · 懂施工的设计团队",
+      experience: "14年从业经验 · 懂施工的设计团队",
       location: "服务地区：丹麦 / 瑞典 / 意大利 / 中国",
     },
     about: {
       title: "关于 CJ Studio (诚嘉设计)",
-      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维，由双核团队联合主理。设计主理人 沈忱 (Shen Chen) 拥有13年行业履历，持有意大利 Unina DBE 建筑设计环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过2年一线木工与全屋定制安装，积累了极扎实的落地工艺经验；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到“懂设计、懂工艺、懂落地”，为您提供高品质的一站式交付。",
+      description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维，由双核团队联合主理。设计主理人 沈忱 (Shen Chen) 拥有14年行业履历，持有意大利 Unina DBE 建筑设计环境硕士学位。他的职业生涯横跨亚、欧、大洋洲：在新西兰从事过2年一线木工与全屋定制安装，积累了极扎实的落地工艺经验；在国内主持过展厅、商业综合体、别墅私宅及餐饮办公等多类型项目。作为“学院派”与“实干派”的结合，沈忱深谙从设计构思到施工落地的每一个细节。依托我们成熟的本地供应商体系，他致力于解决海外装修痛点，真正做到“懂设计、懂工艺、懂落地”，为您提供高品质的一站式交付。",
       description2: "市场主理人 徐晨 (Chen Xu) 常驻丹麦，作为一名活跃于欧洲舞台的男高音歌唱家，他拥有深厚的艺术修养与极高的审美品味。他以敏锐的商业精英视角，精准洞察市场趋势与高端华人客户的生活方式需求，把控每一个项目的格调与品质。",
       stats: {
-        years: "13+",
-        yearsLabel: "设计经验",
+        years: "14+",
+        yearsLabel: "从业经验",
         projects: "50+",
         projectsLabel: "落地案例",
       }
@@ -101,15 +101,15 @@ export const CONTENT: Record<string, Content> = {
       title: "Interior Design & Renovation Experts",
       subtitle: "From blueprints to reality. CJ Studio is a design-driven firm serving clients in Europe and China. We go beyond construction—we are designers who master the craft of building, ensuring every detail serves the final aesthetic.",
       cta: "Get a Free Quote",
-      experience: "13 Years Exp · Design-Led Build",
+      experience: "14 Years Exp · Design-Led Build",
       location: "Serving: Denmark / Sweden / Italy / China",
     },
     about: {
       title: "About CJ Studio",
-      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Design Principal Shen Chen brings 13 years of diverse international experience and holds a Master's degree in Architecture Design and Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he spent 2 years in New Zealand as a hands-on carpenter specializing in custom joinery, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true 'Design-to-Reality' execution.",
+      description1: "CJ Studio represents the convergence of artistic vision and rational engineering. Design Principal Shen Chen brings 14 years of diverse international experience and holds a Master's degree in Architecture Design and Built Environment from Unina DBE, Italy. His expertise bridges theory and practice: he spent 2 years in New Zealand as a hands-on carpenter specializing in custom joinery, and has led a wide range of projects in China, including showrooms, commercial complexes, luxury villas, offices, and restaurants. This unique blend of architectural knowledge and craftsmanship allows him to masterfully control every detail from blueprint to construction. Backed by our mature supplier system, Shen ensures true 'Design-to-Reality' execution.",
       description2: "Market Principal Chen Xu, based in Denmark, is a distinguished Tenor whose deep artistic background informs a refined aesthetic and keen market insight. As a business leader, he understands the lifestyle demands of the high-end Asian community, ensuring every project meets the highest standards of style and class.",
       stats: {
-        years: "13+",
+        years: "14+",
         yearsLabel: "Years Exp.",
         projects: "50+",
         projectsLabel: "Projects",
@@ -216,7 +216,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/vBrjkRLY/GF场景_9.png"
     ]
   },
-  // 2. Villa in Tuscany (Moved to Front)
+  // 2. Villa in Tuscany
   {
     id: 6,
     title: "Villa in Tuscany",
@@ -259,46 +259,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/W3Whcy74/base_9.png"
     ]
   },
-  {
-    id: 1,
-    title: "Sushi Nami",
-    title_zh: "Sushi Nami",
-    category: "Commercial",
-    description: "A complete renovation of a 200sqm Asian fusion restaurant. We focused on warm lighting and durable materials to create a welcoming atmosphere while adhering to strict local hygiene regulations.",
-    location: "Milan, Italy",
-    year: "2023",
-    imageUrl: "https://i.postimg.cc/tJpdcght/场景_10.jpg",
-    gallery: [
-      "https://i.postimg.cc/tJpdcght/场景_10.jpg",
-      "https://i.postimg.cc/J0M3FhbX/场景_5.jpg",
-      "https://i.postimg.cc/QChgzMp1/场景_6.jpg",
-      "https://i.postimg.cc/rsMGHpSG/场景_9.jpg",
-      "https://i.postimg.cc/GtdPfpkt/场景_1.jpg",
-      "https://i.postimg.cc/D0nQNzqZ/场景_2.jpg"
-    ]
-  },
-  {
-    id: 2,
-    title: "Udine Steakhouse",
-    title_zh: "Udine 牛排馆",
-    category: "Commercial",
-    description: "A comprehensive interior design for a modern steakhouse in Udine. The project features a robust spatial layout including detailed isometric views and floor plans, ensuring a seamless flow between the kitchen and dining areas. The design utilizes warm tones and strategic lighting to create an inviting dining experience.",
-    location: "Udine, Italy",
-    year: "2023",
-    imageUrl: "https://i.postimg.cc/Hsf0G34m/场景_1.png",
-    gallery: [
-      "https://i.postimg.cc/Hsf0G34m/场景_1.png",
-      "https://i.postimg.cc/wTt5bnJd/场景_2.png",
-      "https://i.postimg.cc/WbQmRSmx/场景_3.png",
-      "https://i.postimg.cc/28PdpTF5/场景_4.png",
-      "https://i.postimg.cc/rmnWf9Fb/场景_5.png",
-      "https://i.postimg.cc/j5gNMhSV/场景_6.png",
-      "https://i.postimg.cc/Px3ZSMr9/场景_7.png",
-      "https://i.postimg.cc/3RSptZJs/场景_8.png",
-      "https://i.postimg.cc/xTtCMd8t/iso.jpg",
-      "https://i.postimg.cc/jdZ5Pj2v/plan.jpg"
-    ]
-  },
+  // 3. Zen Sushi Restaurant (Swapped with Sushi Nami)
   {
     id: 3,
     title: "Zen Sushi Restaurant",
@@ -321,6 +282,48 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/FKSB57Jy/场景_12.png",
       "https://i.postimg.cc/Z52MMr04/场景_13.png",
       "https://i.postimg.cc/q7K5VzCL/场景_14.png"
+    ]
+  },
+  // 4. Udine Steakhouse
+  {
+    id: 2,
+    title: "Udine Steakhouse",
+    title_zh: "Udine 牛排馆",
+    category: "Commercial",
+    description: "A comprehensive interior design for a modern steakhouse in Udine. The project features a robust spatial layout including detailed isometric views and floor plans, ensuring a seamless flow between the kitchen and dining areas. The design utilizes warm tones and strategic lighting to create an inviting dining experience.",
+    location: "Udine, Italy",
+    year: "2023",
+    imageUrl: "https://i.postimg.cc/Hsf0G34m/场景_1.png",
+    gallery: [
+      "https://i.postimg.cc/Hsf0G34m/场景_1.png",
+      "https://i.postimg.cc/wTt5bnJd/场景_2.png",
+      "https://i.postimg.cc/WbQmRSmx/场景_3.png",
+      "https://i.postimg.cc/28PdpTF5/场景_4.png",
+      "https://i.postimg.cc/rmnWf9Fb/场景_5.png",
+      "https://i.postimg.cc/j5gNMhSV/场景_6.png",
+      "https://i.postimg.cc/Px3ZSMr9/场景_7.png",
+      "https://i.postimg.cc/3RSptZJs/场景_8.png",
+      "https://i.postimg.cc/xTtCMd8t/iso.jpg",
+      "https://i.postimg.cc/jdZ5Pj2v/plan.jpg"
+    ]
+  },
+  // 5. Sushi Nami (Swapped with Zen Sushi)
+  {
+    id: 1,
+    title: "Sushi Nami",
+    title_zh: "Sushi Nami",
+    category: "Commercial",
+    description: "A complete renovation of a 200sqm Asian fusion restaurant. We focused on warm lighting and durable materials to create a welcoming atmosphere while adhering to strict local hygiene regulations.",
+    location: "Milan, Italy",
+    year: "2023",
+    imageUrl: "https://i.postimg.cc/tJpdcght/场景_10.jpg",
+    gallery: [
+      "https://i.postimg.cc/tJpdcght/场景_10.jpg",
+      "https://i.postimg.cc/J0M3FhbX/场景_5.jpg",
+      "https://i.postimg.cc/QChgzMp1/场景_6.jpg",
+      "https://i.postimg.cc/rsMGHpSG/场景_9.jpg",
+      "https://i.postimg.cc/GtdPfpkt/场景_1.jpg",
+      "https://i.postimg.cc/D0nQNzqZ/场景_2.jpg"
     ]
   },
   {
