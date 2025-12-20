@@ -27,11 +27,8 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
             </div>
         </div>
 
-        {/* 
-            Compositional Grid Layout 
-            - Using Flex layout for vertical text items to prevent overlapping
-        */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-[5px] w-full">
+        {/* Compositional Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-[10px] w-full">
           {PORTFOLIO_ITEMS.map((item: PortfolioItem, index: number) => {
             const displayTitle = (lang === 'zh' && item.title_zh) ? item.title_zh : item.title;
             
@@ -44,27 +41,23 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
 
             switch (patternIndex) {
                 case 0:
-                    // 1. Large landscape (Left)
                     colSpan = "md:col-span-8";
                     aspectRatio = "aspect-[16/11]";
                     containerClasses = "md:mb-16"; 
                     break;
                 case 1:
-                    // 2. Narrow portrait (Right, dropped)
                     colSpan = "md:col-span-4";
                     aspectRatio = "aspect-[3/4]";
                     containerClasses = "md:mt-24";
                     textVertical = true; 
                     break;
                 case 2:
-                    // 3. Medium Square (Left, offset down)
                     colSpan = "md:col-span-5";
                     aspectRatio = "aspect-[4/5]";
                     containerClasses = "md:mt-12"; 
                     textVertical = true;
                     break;
                 case 3:
-                    // 4. Large (Right)
                     colSpan = "md:col-span-7";
                     aspectRatio = "aspect-[4/3]";
                     containerClasses = ""; 
@@ -78,34 +71,28 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
                     onClick={() => onProjectClick(item)}
                 >
                     {/* Image Container */}
-                    {/* If vertical text, image takes remaining space (flex-1) */}
                     <div className={`relative overflow-hidden bg-morandi-200 ${textVertical ? 'flex-1' : 'w-full'} ${aspectRatio}`}>
                         <img
                             src={item.imageUrl}
                             alt={displayTitle}
-                            className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-105 group-hover:contrast-[1.05] opacity-[0.98] group-hover:opacity-100"
-                            loading="lazy"
+                            className="w-full h-full object-cover transition-all duration-[0.8s] ease-out group-hover:scale-105 group-hover:contrast-[1.02] opacity-100"
+                            loading="eager"
                         />
                         <WatermarkOverlay />
-                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay"></div>
+                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay"></div>
                     </div>
 
                     {/* Text Container */}
                     {textVertical ? (
-                        // Vertical Text Layout (Side) - Now sits in a flex item, occupying real space
                         <div className="hidden md:flex flex-col justify-between items-center w-8 py-1 h-auto self-stretch">
                              <div className="vertical-text text-[10px] tracking-[0.2em] uppercase text-morandi-400 font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 {item.year}
                              </div>
-                             {/* Title stays horizontal or vertical? Let's keep title hidden or minimal on vertical view, 
-                                 or verticalize the category and keep title clean. 
-                                 Actually, for vertical layout, let's put the CATEGORY vertically. */}
                              <div className="vertical-text text-xs tracking-[0.1em] text-morandi-800 font-medium whitespace-nowrap">
                                 {item.category.toUpperCase()}
                              </div>
                         </div>
                     ) : (
-                        // Horizontal Text Layout (Bottom)
                         <div className="flex justify-between items-baseline mt-2 px-1">
                             <h3 className="text-xl font-sans text-morandi-900 group-hover:text-morandi-600 transition-colors">
                                 {displayTitle}
@@ -117,7 +104,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
                         </div>
                     )}
                     
-                    {/* Mobile Only Text (Always horizontal below image) */}
+                    {/* Mobile Only Text */}
                     <div className={`${textVertical ? 'md:hidden' : 'hidden'} flex justify-between items-baseline mt-2 px-1`}>
                         <h3 className="text-xl font-sans text-morandi-900">
                             {displayTitle}

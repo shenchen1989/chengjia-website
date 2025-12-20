@@ -44,7 +44,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
   }, [lightboxIndex]);
 
   const displayTitle = (lang === 'zh' && project.title_zh) ? project.title_zh : project.title;
-  // Use Chinese description if lang is zh and description_zh exists, otherwise fallback to description
   const displayDescription = (lang === 'zh' && project.description_zh) ? project.description_zh : project.description;
 
   return (
@@ -99,17 +98,17 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
             </div>
         </div>
 
-        {/* Main Image Area - Display with Natural Aspect Ratio */}
-        <div className="space-y-6">
+        {/* Main Image Area */}
+        <div className="space-y-12">
             <div 
-                className="w-full bg-neutral-50 border border-neutral-100 rounded-sm overflow-hidden cursor-zoom-in group relative"
+                className="w-full bg-neutral-100 border border-neutral-100 rounded-sm overflow-hidden cursor-zoom-in group relative"
                 onClick={() => setLightboxIndex(0)}
             >
-                {/* Use max-h to prevent it from taking over the whole screen, but object-contain to keep clarity */}
                 <img 
                     src={images[0]} 
                     alt={displayTitle} 
-                    className="w-full h-auto max-h-[85vh] object-contain mx-auto shadow-sm block"
+                    className="w-full h-auto max-h-[85vh] object-contain mx-auto shadow-sm block transition-transform duration-700 group-hover:scale-[1.01]"
+                    loading="eager"
                 />
                 
                 <WatermarkOverlay />
@@ -121,20 +120,20 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                 </div>
             </div>
 
-            {/* Gallery Grid */}
+            {/* Gallery Grid - Improved Rendering */}
             {images.length > 1 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {images.slice(1).map((img, index) => (
                         <div 
                             key={index + 1} 
-                            className="w-full bg-neutral-100 overflow-hidden group shadow-sm cursor-zoom-in relative rounded-sm aspect-[4/3] border border-neutral-100"
+                            className="w-full bg-neutral-50 overflow-hidden group shadow-sm cursor-zoom-in relative rounded-sm aspect-[4/3] border border-neutral-100"
                             onClick={() => setLightboxIndex(index + 1)}
                         >
                             <img 
                                 src={img} 
                                 alt={`${displayTitle} detail ${index + 1}`} 
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                loading="lazy"
+                                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                                loading="eager"
                             />
                             <WatermarkOverlay />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
@@ -147,10 +146,9 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
         </div>
       </div>
 
-      {/* Lightbox Overlay (Full Screen) */}
+      {/* Lightbox Overlay */}
       {lightboxIndex !== null && (
         <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center animate-fade-in" onClick={() => setLightboxIndex(null)}>
-            {/* Close Button */}
             <button 
                 onClick={() => setLightboxIndex(null)}
                 className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2 z-50"
@@ -158,7 +156,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                 <X size={40} strokeWidth={1.5} />
             </button>
 
-            {/* Navigation Buttons */}
             {images.length > 1 && (
                 <>
                     <button 
@@ -177,7 +174,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                 </>
             )}
 
-            {/* Main Lightbox Image */}
             <div className="w-full h-full flex items-center justify-center p-4 md:p-12">
                 <div className="relative inline-block max-w-full max-h-full">
                     <img 
@@ -190,7 +186,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                 </div>
             </div>
             
-            {/* Counter */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 font-sans text-sm tracking-widest z-50">
                 {lightboxIndex + 1} / {images.length}
             </div>
