@@ -61,6 +61,7 @@
         font-family: 'Tenor Sans', 'Noto Sans SC', sans-serif;
         background-color: #FAFAF9; /* Matches morandi-100 */
         color: #4A4844; /* Matches morandi-800 */
+        -webkit-font-smoothing: antialiased;
       }
       h1, h2, h3, h4, .serif {
         font-family: 'Tenor Sans', 'Noto Serif SC', sans-serif;
@@ -76,6 +77,16 @@
       html {
         scroll-behavior: smooth;
       }
+
+      /* Image Clarity Optimizations */
+      img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: translateZ(0);
+      }
+
       /* Hide scrollbar for clean look */
       ::-webkit-scrollbar {
         width: 6px;
