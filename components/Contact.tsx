@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Content, Language } from '../types';
-import { Mail, Phone, MapPin, MessageCircle, Globe, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 
 interface ContactProps {
@@ -24,13 +24,18 @@ const Contact: React.FC<ContactProps> = ({ content, lang }) => {
                     </div>
                 </div>
                 <h2 className="text-4xl font-serif text-white mb-6">{content.title}</h2>
-                <p className="text-neutral-500 font-light">{content.subtitle}</p>
+                <p className="text-neutral-500 font-light mb-8">{content.subtitle}</p>
             </div>
 
             <div className="space-y-6">
               <div className="flex items-start gap-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-600 w-24 pt-1">Location</span>
-                <span className="text-neutral-300 font-light">{content.location}</span>
+                <div className="flex flex-col gap-1">
+                    <span className="text-neutral-300 font-light">
+                        {content.location}
+                    </span>
+                    <span className="text-[10px] text-neutral-600 uppercase tracking-tighter">Genova, Italy</span>
+                </div>
               </div>
 
               <div className="flex items-start gap-6">
@@ -65,7 +70,7 @@ const Contact: React.FC<ContactProps> = ({ content, lang }) => {
 
           {/* Minimal Form */}
           <div className="bg-[#2A2A28] p-10 rounded-sm">
-            <form className="space-y-8">
+            <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 gap-8">
                   <div className="relative">
                     <input type="text" placeholder={content.formName} className="w-full bg-transparent border-b border-neutral-600 py-3 text-white focus:border-white outline-none transition-colors placeholder-neutral-600" />
@@ -77,7 +82,7 @@ const Contact: React.FC<ContactProps> = ({ content, lang }) => {
               <div className="relative">
                 <textarea rows={3} placeholder={content.formMessage} className="w-full bg-transparent border-b border-neutral-600 py-3 text-white focus:border-white outline-none transition-colors resize-none placeholder-neutral-600"></textarea>
               </div>
-              <button type="submit" className="bg-white text-neutral-900 px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-neutral-200 transition-colors w-full md:w-auto">
+              <button type="submit" className="bg-white text-neutral-900 px-8 py-4 text-xs uppercase tracking-widest font-bold hover:bg-neutral-200 transition-colors w-full md:w-auto">
                 {content.formSubmit}
               </button>
             </form>
@@ -87,7 +92,7 @@ const Contact: React.FC<ContactProps> = ({ content, lang }) => {
         <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-neutral-600 uppercase tracking-widest">
           <p>&copy; {new Date().getFullYear()} CJ Studio.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-             <span>Privacy Policy</span>
+             <span>Interior Design in Europe & China</span>
           </div>
         </div>
       </div>
