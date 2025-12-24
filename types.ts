@@ -1,5 +1,5 @@
 
-export type Language = 'zh' | 'en';
+export type Language = 'zh' | 'en' | 'it' | 'da';
 
 export interface NavItem {
   label: string;
@@ -15,23 +15,29 @@ export interface ServiceItem {
 export interface PortfolioItem {
   id: number;
   title: string;
-  title_zh?: string; // Optional Chinese title
+  title_zh?: string;
   category: string;
-  description?: string; // Extended description for the detail page (English)
-  description_zh?: string; // Extended description for the detail page (Chinese)
+  description?: string;
+  description_zh?: string;
   location?: string;
   year?: string;
-  imageUrl: string; // Cover image
-  gallery?: string[]; // Array of additional images
+  imageUrl: string;
+  gallery?: string[];
 }
 
 export interface Content {
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
   nav: {
     home: string;
     services: string;
     portfolio: string;
     about: string;
     contact: string;
+    langSwitch: string;
   };
   hero: {
     title: string;
@@ -69,12 +75,11 @@ export interface Content {
     phone: string;
     wechat: string;
     location: string;
-    linkedin?: string; // Added optional LinkedIn field
+    linkedin?: string; 
     formName: string;
     formEmail: string;
     formMessage: string;
     formSubmit: string;
   };
-  // Adding ai property as optional any to prevent build errors if old AIAdviser file is checked
   ai?: any;
 }
