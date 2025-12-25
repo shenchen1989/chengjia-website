@@ -17,8 +17,10 @@ export interface PortfolioItem {
   title: string;
   title_zh?: string; // Optional Chinese title
   category: string;
-  description?: string; // Extended description for the detail page (English)
-  description_zh?: string; // Extended description for the detail page (Chinese)
+  description?: string; // English (Default)
+  description_zh?: string; // Chinese
+  description_it?: string; // Italian
+  description_da?: string; // Danish
   location?: string;
   year?: string;
   imageUrl: string; // Cover image
