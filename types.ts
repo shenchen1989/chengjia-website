@@ -1,3 +1,4 @@
+
 export type Language = 'zh' | 'en' | 'it' | 'da';
 
 export interface NavItem {
@@ -14,30 +15,24 @@ export interface ServiceItem {
 export interface PortfolioItem {
   id: number;
   title: string;
-  title_zh?: string;
+  title_zh?: string; // Optional Chinese title
   category: string;
-  description?: string;
-  description_zh?: string;
+  description?: string; // Extended description for the detail page (English)
+  description_zh?: string; // Extended description for the detail page (Chinese)
   location?: string;
   year?: string;
-  imageUrl: string;
-  gallery?: string[];
-  hideFromHome?: boolean; // 新增：是否在首页隐藏
+  imageUrl: string; // Cover image
+  gallery?: string[]; // Array of additional images
 }
 
 export interface Content {
-  seo: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
   nav: {
     home: string;
     services: string;
     portfolio: string;
     about: string;
     contact: string;
-    langSwitch: string;
+    switchLanguage: string;
   };
   hero: {
     title: string;

@@ -1,20 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>诚嘉设计 CJ Studio | 欧洲华人空间设计全案服务</title>
-    <meta name="description" content="诚嘉设计(CJ Studio)专注为欧洲及中国客户提供高品质室内设计与装修全案服务，涵盖商业空间、住宅及别墅。14年行业履历，懂设计、懂工艺。" />
-    <meta name="author" content="CJ Studio" />
-    
-    <!-- Open Graph / Facebook (SEO) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.chengjiadesign.com/" />
-    <meta property="og:title" content="诚嘉设计 CJ Studio | 室内设计与装修专家" />
-    <meta property="og:description" content="专业欧洲室内设计与装修服务，服务意大利、丹麦、瑞典及中国。" />
-    <meta property="og:image" content="https://i.postimg.cc/mrB5sdLw/LOGO.png" />
-
+    <title>CJ Studio | 诚嘉设计</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,22 +16,23 @@
               display: ['Tenor Sans', 'Bodoni Moda', 'serif'],
             },
             colors: {
+              // Lighter, Warmer Morandi Palette with Cool Accents
               morandi: {
                 50: '#FFFFFF',
-                100: '#FAFAF9',
-                200: '#F2F1ED',
-                300: '#E6E4DF',
-                400: '#BDBBB5',
-                500: '#94928D',
+                100: '#FAFAF9', // Even lighter warm white
+                200: '#F2F1ED', // Very subtle warm greige
+                300: '#E6E4DF', // Lines
+                400: '#BDBBB5', // Meta text
+                500: '#94928D', // Body text
                 600: '#75736F',
-                800: '#4A4844',
-                900: '#2E2D2B',
+                800: '#4A4844', // Headings
+                900: '#2E2D2B', // Darkest
               },
               cool: {
-                100: '#E8ECEF',
+                100: '#E8ECEF', // Pale cool blue-grey for composition
               },
               accent: {
-                red: '#8A3324',
+                red: '#8A3324', // Architectural Dark Red / Brick Red
               }
             },
             keyframes: {
@@ -68,21 +59,26 @@
     <style>
       body {
         font-family: 'Tenor Sans', 'Noto Sans SC', sans-serif;
-        background-color: #FAFAF9;
-        color: #4A4844;
+        background-color: #FAFAF9; /* Matches morandi-100 */
+        color: #4A4844; /* Matches morandi-800 */
         -webkit-font-smoothing: antialiased;
       }
       h1, h2, h3, h4, .serif {
         font-family: 'Tenor Sans', 'Noto Serif SC', sans-serif;
       }
+      /* Vertical Text Utility */
       .vertical-text {
         writing-mode: vertical-rl;
         text-orientation: mixed;
         transform: rotate(180deg);
       }
+      
+      /* Smooth scrolling */
       html {
         scroll-behavior: smooth;
       }
+
+      /* Image Clarity Optimizations */
       img {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
@@ -90,6 +86,8 @@
         -webkit-backface-visibility: hidden;
         transform: translateZ(0);
       }
+
+      /* Hide scrollbar for clean look */
       ::-webkit-scrollbar {
         width: 6px;
       }
