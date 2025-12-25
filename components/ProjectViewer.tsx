@@ -14,14 +14,12 @@ interface ProjectViewerProps {
 const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack, lang }) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   
-  // Use gallery if available, otherwise just the main image. 
   const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.imageUrl];
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Handle keyboard navigation for lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (lightboxIndex === null) return;
@@ -33,7 +31,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxIndex, images.length]);
 
-  // Prevent body scroll when lightbox is open
   useEffect(() => {
     if (lightboxIndex !== null) {
       document.body.style.overflow = 'hidden';
@@ -44,13 +41,20 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
   }, [lightboxIndex]);
 
   const displayTitle = (lang === 'zh' && project.title_zh) ? project.title_zh : project.title;
-  const displayDescription = (lang === 'zh' && project.description_zh) ? project.description_zh : project.description;
+  
+  // Dynamic description logic
+  const getDisplayDescription = () => {
+    if (lang === 'zh' && project.description_zh) return project.description_zh;
+    if (lang === 'it' && project.description_it) return project.description_it;
+    if (lang === 'da' && project.description_da) return project.description_da;
+    return project.description; // Fallback to English
+  };
+  const displayDescription = getDisplayDescription();
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-24 animate-fade-in relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Navigation */}
         <button 
             onClick={onBack}
             className="group flex items-center gap-2 text-neutral-500 hover:text-neutral-900 transition-colors mb-8 text-sm font-medium tracking-wide uppercase"
@@ -59,7 +63,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
             {content.backToHome}
         </button>
 
-        {/* Project Header */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
             <div className="lg:col-span-2">
                 <h1 className="text-3xl md:text-5xl font-serif font-medium text-neutral-900 mb-6 leading-tight">
@@ -98,7 +101,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
             </div>
         </div>
 
-        {/* Main Image Area */}
         <div className="space-y-12">
             <div 
                 className="w-full bg-neutral-100 border border-neutral-100 rounded-sm overflow-hidden cursor-zoom-in group relative"
@@ -110,9 +112,7 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                     className="w-full h-auto max-h-[85vh] object-contain mx-auto shadow-sm block transition-transform duration-700 group-hover:scale-[1.01]"
                     loading="eager"
                 />
-                
                 <WatermarkOverlay />
-                
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5 pointer-events-none">
                     <div className="bg-white/90 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg flex items-center gap-2 backdrop-blur-md">
                         <ZoomIn size={14} /> View Fullscreen
@@ -120,7 +120,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
                 </div>
             </div>
 
-            {/* Gallery Grid - Improved Rendering */}
             {images.length > 1 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {images.slice(1).map((img, index) => (
@@ -146,7 +145,6 @@ const ProjectViewer: React.FC<ProjectViewerProps> = ({ project, content, onBack,
         </div>
       </div>
 
-      {/* Lightbox Overlay */}
       {lightboxIndex !== null && (
         <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center animate-fade-in" onClick={() => setLightboxIndex(null)}>
             <button 
