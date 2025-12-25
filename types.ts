@@ -1,4 +1,3 @@
-
 export type Language = 'zh' | 'en' | 'it' | 'da';
 
 export interface NavItem {
@@ -23,6 +22,7 @@ export interface PortfolioItem {
   year?: string;
   imageUrl: string;
   gallery?: string[];
+  hideFromHome?: boolean; // 新增：是否在首页隐藏
 }
 
 export interface Content {

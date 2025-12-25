@@ -1,4 +1,3 @@
-
 import { Content, PortfolioItem } from './types';
 
 // =================================================================
@@ -10,7 +9,7 @@ export const CONTENT: Record<string, Content> = {
   zh: {
     seo: {
       title: "诚嘉设计 CJ Studio | 欧洲华人室内设计与装修全案服务",
-      description: "诚嘉设计(CJ Studio)专注为欧洲及中国客户提供高品质空间解决方案。业务涵盖意大利、丹麦、瑞典及中国的商业空间设计与住宅翻新。14年经验，懂施工、懂设计。",
+      description: "诚嘉设计(CJ Studio)专注为欧洲及中国客户提供高品质空间解决方案。业务涵盖意大利、丹麦、瑞典及中国的商业空间设计与住宅翻新. 14年经验，懂施工、懂设计。",
       keywords: "欧洲华人装修, 意大利室内设计, 丹麦装修公司, 热那亚装修, 诚嘉设计, CJ Studio, 中餐馆设计",
     },
     nav: { home: "首页", services: "服务内容", portfolio: "精选案例", about: "关于我们", contact: "联系我们", langSwitch: "切换语言" },
@@ -24,7 +23,7 @@ export const CONTENT: Record<string, Content> = {
     about: {
       title: "关于 CJ Studio (诚嘉设计)",
       description1: "CJ Studio 汇聚了感性的艺术视野与理性的工程思维。设计主理人沈忱拥有14年行业履历，持有意大利硕士学位，深谙从设计构思到施工落地的每一个细节。",
-      description2: "市场主理人徐晨常驻丹麦，作为活跃于欧洲的艺术家，他精准洞察市场趋势与高端华人客户的生活方式需求。",
+      description2: "市场主理人徐晨常驻丹麦，作为活跃于欧洲的艺术家，他精准洞察 market 趋势与高端华人客户的生活方式需求。",
       stats: { years: "14+", yearsLabel: "从业经验", projects: "50+", projectsLabel: "落地案例" }
     },
     services: {
@@ -110,23 +109,23 @@ export const CONTENT: Record<string, Content> = {
     nav: { home: "Home", services: "Servizi", portfolio: "Portfolio", about: "Chi Siamo", contact: "Contatti", langSwitch: "Lingua" },
     hero: {
       title: "Architetti d'Interni per il Vostro Spazio Ideale",
-      subtitle: "Dal progetto tecnico alla realizzazione finale. <span class=\"text-accent-red font-medium text-xl\">CJ Studio</span> è uno studio orientato al design che serve clienti in Europa e Cina.",
+      subtitle: "Dal progetto tecnico alla realizzazione finale. <span class=\"text-accent-red font-medium text-xl\">CJ Studio</span> è uno studio orientato al design che serve clients in Europe and Cina.",
       cta: "Preventivo Gratuito",
       experience: "14 Anni di Esperienza · Design & Costruzione",
       location: "Serviamo: Danimarca / Svezia / Italy / Cina",
     },
     about: {
       title: "Chi è CJ Studio",
-      description1: "CJ Studio rappresenta la convergenza tra visione artistica e ingegneria razionale. Il Responsabile del Design Shen Chen vanta 14 anni di esperienza internazionale.",
+      description1: "CJ Studio rappresenta la convergenza tra visione artistica e ingegneria razionale. Il Responsabile del Design Shen Chen vanta 14 anni di experience internazionale.",
       description2: "Il Responsabile di Mercato Chen Xu, con sede in Danimarca, è un distinto artista con un'estetica raffinata.",
       stats: { years: "14+", yearsLabel: "Anni Esp.", projects: "50+", projectsLabel: "Progetti" }
     },
     services: {
       title: "I Nostri Servizi",
-      subtitle: "Un approccio guidato dal design che copre spazio, prodotto e identità di marca.",
+      subtitle: "Un approccio guidato dal design che copre spazio, producto e identità di marca.",
       items: [
         { title: "Design Spazi Commerciali", description: "Ristoranti, bar, negozi e uffici. Offriamo una pianificazione professionale.", icon: "Commercial" },
-        { title: "Design Residenziale & Ville", description: "Specializzati in ville e appartamenti di lusso. Forniamo consulenza completa.", icon: "Home" },
+        { title: "Design Residenziale & Ville", description: "Specializzati in ville e apartments di lusso. Forniamo consulenza completa.", icon: "Home" },
         { title: "Design del Prodotto & Mobili", description: "Sviluppo di mobili originali e pezzi su misura.", icon: "Furniture" },
         { title: "Brand Visual Design (VI)", description: "Soluzioni complete di identità visiva, inclusi logo e segnaletica.", icon: "Branding" },
         { title: "Styling & Arredamento", description: "Soluzioni di styling flessibili, dalla selezione curata IKEA.", icon: "Cabinet" },
@@ -157,8 +156,8 @@ export const CONTENT: Record<string, Content> = {
     nav: { home: "Hjem", services: "Ydelser", portfolio: "Portfolio", about: "Om os", contact: "Kontakt", langSwitch: "Sprog" },
     hero: {
       title: "Eksperter i Indretning og Renovering",
-      subtitle: "Fra tegnestue til virkelighed. <span class=\"text-accent-red font-medium text-xl\">CJ Studio</span> er et designorienteret firma.",
-      cta: "Få et gratis tilbud",
+      subtitle: "Fra tegnestue till virkelighed. <span class=\"text-accent-red font-medium text-xl\">CJ Studio</span> er et designorienteret firma.",
+      cta: "Få et gratis tillbud",
       experience: "14 års erfaring · Design-drevet byggeri",
       location: "Områder: Danmark / Sverige / Italien / Kina",
     },
@@ -170,17 +169,17 @@ export const CONTENT: Record<string, Content> = {
     },
     services: {
       title: "Vores Ydelser",
-      subtitle: "En designorienteret tilgang, der dækker rum, produkt og brand-identitet.",
+      subtitle: "En designorienteret tillgang, der dækker rum, produkt og brand-identitet.",
       items: [
         { title: "Design af Erhvervslokaler", description: "Restauranter, barer, butikker og kontorer. Professionel planlægning.", icon: "Commercial" },
         { title: "Bolig- & Villadesign", description: "Specialiseret i luksusvillaer og lejligheder. Fuld rådgivning.", icon: "Home" },
         { title: "Møbel- & Produktdesign", description: "Udvikling af originale møbler og specialfremstillede løsninger.", icon: "Furniture" },
         { title: "Visuel Brand-identitet (VI)", description: "Komplette visuelle løsninger, herunder logoer og skiltning.", icon: "Branding" },
-        { title: "Styling & Indretning", description: "Fleksible stylingløsninger, lige fra IKEA-udvalg til specialfremstilling.", icon: "Cabinet" },
+        { title: "Styling & Indretning", description: "Fleksible stylingløsninger, lige fra IKEA-udvalg till specialfremstilling.", icon: "Cabinet" },
         { title: "Designledelse & Byggeri", description: "Vi are designere, der forstår byggeri. Vi fører tilsyn på pladsen.", icon: "Construction" },
       ],
     },
-    portfolio: { title: "Udvalgte Projekter", subtitle: "Balance mellem æstetik og funktionalitet", viewProject: "Se Projekt", backToHome: "Tilbage til Forsiden" },
+    portfolio: { title: "Udvalgte Projekter", subtitle: "Balance mellem æstetik og funktionalitet", viewProject: "Se Projekt", backToHome: "Tilbage till Forsiden" },
     contact: {
       title: "Kontakt os",
       subtitle: "Lad os drøfte dit projekt",
@@ -198,47 +197,64 @@ export const CONTENT: Record<string, Content> = {
 };
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  // 1. Vienna Villa, Austria
-  {
-    id: 16,
-    title: "Vienna Villa, Austria",
-    title_zh: "奥地利维也纳别墅",
-    category: "Residential",
-    description: "A comprehensive private villa design project located in Vienna, Austria. This project spans across three levels of luxury living space, including a grand living room, state-of-the-art kitchen, cozy children's suites, a peaceful study area, and a sophisticated master bedroom suite. The design harmonizes modern minimalism with the elegance of European living. Through precise spatial planning and meticulous material selection, we created a high-quality sanctuary that perfectly balances artistic aesthetics with daily functionality.",
-    description_zh: "位于奥地利维也纳的豪华私人别墅全案设计。该项目涵盖了从一层到三层的完整生活空间规划，包含宏伟的客厅、现代化厨房、温馨的儿童房、静谧的书房以及精致的主卧套间。设计风格融合了现代极简与欧式生活的优雅，通过精密的平面布局与细腻的材质选配，为客户打造了一个兼具艺术审美与实用机能的高品质居所。",
-    location: "Vienna, Austria",
-    year: "2024",
-    imageUrl: "https://i.postimg.cc/Cx1ngFk5/客厅1.jpg",
-    gallery: [
-      "https://i.postimg.cc/Cx1ngFk5/客厅1.jpg", "https://i.postimg.cc/bwBDYKRj/一层洗手间11.jpg", "https://i.postimg.cc/vZNg8pvs/一层洗手间12.jpg", "https://i.postimg.cc/DwZ4T2Ld/三层办公书房36.jpg", "https://i.postimg.cc/SxsYhyCV/三层办公书房37.jpg", "https://i.postimg.cc/Z5RvSTpw/三层办公书房38.jpg", "https://i.postimg.cc/K8z32ZBp/三层办公书房39.jpg", "https://i.postimg.cc/BnVLZdBz/三层卫生间40.jpg", "https://i.postimg.cc/7ZWGPpnd/三层卫生间41.jpg", "https://i.postimg.cc/t4MZRLzQ/三层卫生间42.jpg", "https://i.postimg.cc/13jnRLK1/三层卫生间43.jpg", "https://i.postimg.cc/jSFwqG4c/三层女儿房32.jpg", "https://i.postimg.cc/sgNQft4T/三层女儿房33.jpg", "https://i.postimg.cc/VkVrs3W7/三层女儿房34.jpg", "https://i.postimg.cc/4xS74rQL/三层女儿房35.jpg", "https://i.postimg.cc/Gm583ZxF/三层楼梯30.jpg", "https://i.postimg.cc/FHBdF2Vb/三层楼梯31.jpg", "https://i.postimg.cc/jjnWDZMp/主卧卫生间28.jpg", "https://i.postimg.cc/fbS3VBHn/主卧卫生间29.jpg", "https://i.postimg.cc/Z5MBY1LZ/主卧室22.jpg", "https://i.postimg.cc/mg5zZ0SZ/主卧室23.jpg", "https://i.postimg.cc/vmx143PR/主卧室24.jpg", "https://i.postimg.cc/k5RV2fjd/主卧衣帽间25.jpg", "https://i.postimg.cc/8CfF7tyD/主卧衣帽间26.jpg", "https://i.postimg.cc/GpTB4qMd/主卧衣帽间27.jpg", "https://i.postimg.cc/65z4g728/二层卫生间19.jpg", "https://i.postimg.cc/Dy54HWJb/二层卫生间20.jpg", "https://i.postimg.cc/Z5RvSTp5/二层卫生间21.jpg", "https://i.postimg.cc/htjQBSTP/二层走廊13.jpg", "https://i.postimg.cc/28TLMqbS/儿童书房10.jpg", "https://i.postimg.cc/4NwHqK74/儿童书房9.jpg", "https://i.postimg.cc/Yq8LZ4GK/儿童房14.jpg", "https://i.postimg.cc/5NpQTHYW/儿童房15.jpg", "https://i.postimg.cc/02ZKF6MP/儿童房16.jpg", "https://i.postimg.cc/02ZKF6M8/儿童房17.jpg", "https://i.postimg.cc/VL40pSrf/儿童房18.jpg", "https://i.postimg.cc/SxsYhyCz/入口玄关6.jpg", "https://i.postimg.cc/SxsYhyC9/入口玄关7.jpg", "https://i.postimg.cc/RZFJBMKc/入口玄关8.jpg", "https://i.postimg.cc/WbSqCDFV/厨房2.jpg", "https://i.postimg.cc/rwmRk8xz/楼梯44.jpg", "https://i.postimg.cc/RZFJBMK6/楼梯走廊4.jpg", "https://i.postimg.cc/cLHtSswt/楼梯走廊5.jpg", "https://i.postimg.cc/sDKGqBQR/餐厅3.jpg", "https://i.postimg.cc/ZYXJR4Gv/1F平面图.jpg", "https://i.postimg.cc/jqBR5tp7/2F平面图.jpg", "https://i.postimg.cc/44jXdsDh/3F平面图.jpg"
-    ]
-  },
-  // 更多项目...
+  // ==========================================
+  // 🍽️ 第一优先级：餐厅项目 (RESTAURANTS)
+  // ==========================================
   {
     id: 15,
     title: "Forest Bamboo Restaurant Austria",
     title_zh: "奥地利筑林餐厅设计",
     category: "Commercial",
     description: "An ambitious restaurant design project in Austria centered around the theme of 'Bamboo Forest'.",
-    description_zh: "位于奥地利的大型餐饮设计项目，以“筑林”为核心主题。",
+    description_zh: "位于奥地利的大型餐饮设计项目，以“筑林”为核心主题。该项目融合了自然美学与现代用餐体验。",
     location: "Austria",
     year: "2024",
     imageUrl: "https://i.postimg.cc/htHYLYtf/轴测图77.jpg",
-    gallery: [
-      "https://i.postimg.cc/htHYLYtf/轴测图77.jpg", "https://i.postimg.cc/X71mJqMr/休息区24.jpg"
-    ]
+    gallery: ["https://i.postimg.cc/htHYLYtf/轴测图77.jpg", "https://i.postimg.cc/X71mJqMr/休息区24.jpg"]
   },
+  {
+    id: 26,
+    title: "WinHouse Steakhouse",
+    title_zh: "WinHouse牛排馆",
+    category: "Commercial",
+    description: "Interior design for WinHouse Steakhouse. 美式工业风与高端用餐氛围的融合。",
+    description_zh: "WinHouse牛排馆室内设计项目。致力于打造一个兼具美式工业风与高端用餐氛围的现代商业空间。",
+    location: "Shanghai, China",
+    year: "2020",
+    imageUrl: "https://i.postimg.cc/L4VrZX5q/portfolio_2025_页面_038_Win_House牛排馆.jpg",
+    gallery: ["https://i.postimg.cc/L4VrZX5q/portfolio_2025_页面_038_Win_House牛排馆.jpg"]
+  },
+
+  // ==========================================
+  // 🏨 第二优先级：精品酒店项目 (HOTELS)
+  // ==========================================
   {
     id: 14,
     title: "Tuscany Livorno Mini Hotel",
     title_zh: "托斯卡纳Livorno Mini Hotel",
     category: "Commercial",
     description: "A boutique hotel design project located in Livorno, Italy.",
-    description_zh: "位于意大利里窝那（Livorno）的精品酒店设计项目。",
+    description_zh: "位于意大利里窝那（Livorno）的精品酒店设计项目。强调托斯卡纳式的舒适与现代设计感。",
     location: "Livorno, Italy",
     year: "2023",
     imageUrl: "https://i.postimg.cc/KjNfCqbf/大堂9.jpg",
     gallery: ["https://i.postimg.cc/KjNfCqbf/大堂9.jpg"]
+  },
+
+  // ==========================================
+  // 🏡 第三优先级：住宅与别墅 (RESIDENTIAL)
+  // ==========================================
+  {
+    id: 16,
+    title: "Vienna Villa, Austria",
+    title_zh: "奥地利维也纳别墅",
+    category: "Residential",
+    description: "A comprehensive private villa design project located in Vienna, Austria.",
+    description_zh: "位于奥地利维也纳的豪华私人别墅全案设计。从空间规划到软装搭配的完整呈现。",
+    location: "Vienna, Austria",
+    year: "2024",
+    imageUrl: "https://i.postimg.cc/Cx1ngFk5/客厅1.jpg",
+    gallery: ["https://i.postimg.cc/Cx1ngFk5/客厅1.jpg", "https://i.postimg.cc/bwBDYKRj/一层洗手间11.jpg", "https://i.postimg.cc/ZYXJR4Gv/1F平面图.jpg"]
   },
   {
     id: 13,
@@ -246,10 +262,185 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title_zh: "罗马Lucio极简公寓",
     category: "Residential",
     description: "A minimalist apartment renovation project in Rome.",
-    description_zh: "位于罗马的Lucio极简公寓翻新项目。",
+    description_zh: "位于罗马的Lucio极简公寓翻新项目。在古城中创造极简的居住艺术。",
     location: "Rome, Italy",
     year: "2024",
     imageUrl: "https://i.postimg.cc/prTRnSsy/平面图12.jpg",
     gallery: ["https://i.postimg.cc/prTRnSsy/平面图12.jpg"]
+  },
+  // [今日上传的旧项目 - 靠后放]
+  {
+    id: 37,
+    title: "Shanghai Shaoxing Road Duplex Apartment",
+    title_zh: "上海绍兴路复式老洋房公寓",
+    category: "Residential",
+    description: "Historic garden house restoration with contemporary luxury.",
+    description_zh: "上海绍兴路老洋房复式公寓。将历史建筑底蕴与现代生活方式完美结合。",
+    location: "Shanghai, China",
+    year: "2020",
+    imageUrl: "https://i.postimg.cc/fL4Rkv5z/portfolio_2025_页面_070上海绍兴路复式老洋房公寓.jpg",
+    gallery: ["https://i.postimg.cc/fL4Rkv5z/portfolio_2025_页面_070上海绍兴路复式老洋房公寓.jpg"]
+  },
+  {
+    id: 36,
+    title: "Shanghai Wuyi Road Townhouse",
+    title_zh: "上海武夷路排屋",
+    category: "Residential",
+    description: "Heritage preservation and luxury living.",
+    description_zh: "上海武夷路历史排屋翻新。在繁华都市中心保留一方私密静谧。",
+    location: "Shanghai, China",
+    year: "2020",
+    imageUrl: "https://i.postimg.cc/8zVFjt0c/portfolio_2025_页面_063上海武夷路排屋.jpg",
+    gallery: ["https://i.postimg.cc/8zVFjt0c/portfolio_2025_页面_063上海武夷路排屋.jpg"]
+  },
+  {
+    id: 35,
+    title: "Liaoning Anshan Villa",
+    title_zh: "辽宁鞍山别墅",
+    category: "Residential",
+    imageUrl: "https://i.postimg.cc/0NY0zznp/portfolio_2025_页面_058辽宁鞍山别墅.jpg",
+    gallery: ["https://i.postimg.cc/0NY0zznp/portfolio_2025_页面_058辽宁鞍山别墅.jpg"]
+  },
+  {
+    id: 34,
+    title: "Zhejiang Ningbo Villa",
+    title_zh: "浙江宁波别墅",
+    category: "Residential",
+    imageUrl: "https://i.postimg.cc/Kj2Xn3SC/portfolio_2025_页面_054浙江宁波别墅.jpg",
+    gallery: ["https://i.postimg.cc/Kj2Xn3SC/portfolio_2025_页面_054浙江宁波别墅.jpg"]
+  },
+  {
+    id: 33,
+    title: "Shanghai Ziyun Road Apartment",
+    title_zh: "上海紫云路公寓",
+    category: "Residential",
+    imageUrl: "https://i.postimg.cc/1R2szXjv/portfolio_2025_页面_050上海紫云路公寓.jpg",
+    gallery: ["https://i.postimg.cc/1R2szXjv/portfolio_2025_页面_050上海紫云路公寓.jpg"]
+  },
+  {
+    id: 32,
+    title: "Japan NISEKO Ski Resort Villa",
+    title_zh: "日本NISEKO滑雪度假别墅",
+    category: "Residential",
+    imageUrl: "https://i.postimg.cc/kXY8GQdL/portfolio_2025_页面_048日本NISEKO滑雪度假别墅.jpg",
+    gallery: ["https://i.postimg.cc/kXY8GQdL/portfolio_2025_页面_048日本NISEKO滑雪度假别墅.jpg"]
+  },
+
+  // ==========================================
+  // 🏢 第四优先级：办公/商业 (OFFICE & COMMERCIAL) -> 最后放
+  // ==========================================
+  {
+    id: 17,
+    title: "Standard Chartered Bank Shanghai Office",
+    title_zh: "渣打银行上海办公室",
+    category: "Commercial",
+    description: "Dynamic banking environment design by Woods Bagot.",
+    description_zh: "渣打银行上海办公室。Woods Bagot 期间作品。",
+    location: "Shanghai, China",
+    year: "2023",
+    imageUrl: "https://i.postimg.cc/G3TMJmXT/portfolio_2025_页面_004渣打银行上海办公室.jpg",
+    gallery: ["https://i.postimg.cc/G3TMJmXT/portfolio_2025_页面_004渣打银行上海办公室.jpg", "https://i.postimg.cc/sgmKDQgJ/portfolio_2025_页面_005渣打银行上海办公室.jpg"]
+  },
+  {
+    id: 18,
+    title: "Hangzhou Binjiang Intime Shopping Mall",
+    title_zh: "杭州滨江银泰购物广场",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/sXVn4YHm/portfolio_2025_页面_011杭州滨江银泰购物广场.jpg",
+    gallery: ["https://i.postimg.cc/sXVn4YHm/portfolio_2025_页面_011杭州滨江银泰购物广场.jpg"]
+  },
+  {
+    id: 19,
+    title: "Sunche Oil Shanghai Bund Office",
+    title_zh: "鑫驰石油上海外滩办公室",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/zDxC9Z3C/portfolio_2025_页面_017鑫驰石油上海外滩办公室.jpg",
+    gallery: ["https://i.postimg.cc/zDxC9Z3C/portfolio_2025_页面_017鑫驰石油上海外滩办公室.jpg"]
+  },
+  {
+    id: 20,
+    title: "ASCENTIAL Shanghai Office",
+    title_zh: "ASCENTIAL上海办公室",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/qBwPSR8w/portfolio_2025_页面_019ASCENTIAL上海办公室.jpg",
+  },
+  {
+    id: 24,
+    title: "Challenge Textile Group Shanghai Office",
+    title_zh: "嘉麟杰纺织集团上海办公室",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/sf8gqwPW/portfolio_2025_页面_032嘉麟杰纺织集团上海办公室.jpg",
+  },
+  {
+    id: 27,
+    title: "Santoni Yiwu Textile Machinery Exhibition",
+    title_zh: "santoni义乌纺织机械展",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/zv18DPxF/portfolio_2025_页面_037santoni义乌纺织机械展.jpg",
+  },
+  {
+    id: 25,
+    title: "Shanghai Lingerie Exhibition",
+    title_zh: "上海内衣展",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/HsDVj6Jn/portfolio_2025_页面_034上海内衣展.jpg",
+  },
+  {
+    id: 22,
+    title: "JUZPLAY Fitness Center Shanghai",
+    title_zh: "上海 JUZPLAY 健身中心",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/sXr26X5T/portfolio_2025_页面_027上海JUZPLAY健身中心.jpg",
+  },
+  {
+    id: 23,
+    title: "One Plus Yoga & Fitness Center",
+    title_zh: "上海浦东假日酒店一加瑜伽健身中心",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/Wz4q8zPQ/portfolio_2025_页面_031_上海浦东假日酒店一加瑜伽健身中心.jpg",
+  },
+
+  // ==========================================
+  // 🗑️ 被要求“往后放”且“不出现在首页”的项目 (END ITEMS)
+  // ==========================================
+  {
+    id: 28,
+    title: "KFC Store Design & Detailing",
+    title_zh: "KFC店面设计与深化",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/L6pLG930/portfolio_2025_页面_039KFC店面设计与深化.jpg",
+    hideFromHome: true
+  },
+  {
+    id: 21,
+    title: "MR CHOI Dessert Pudong Airport Store",
+    title_zh: "MR CHOI 甜品浦东机场店",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/0j7b5SPS/portfolio_2025_页面_025MR_CHOI甜品浦东机场店.jpg",
+    hideFromHome: true
+  },
+  {
+    id: 31,
+    title: "Sanya Shangri-La Resort Construction Deepening",
+    title_zh: "三亚香格里拉度假酒店施工深化",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/44MFc9Z9/portfolio_2025_页面_046三亚香格里拉度假酒店施工深化.jpg",
+    hideFromHome: true
+  },
+  {
+    id: 30,
+    title: "Shanghai Xuhui Cape Good Hope Hotel",
+    title_zh: "上海徐汇好望角酒店",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/TPqZqY0S/portfolio_2025_页面_044上海徐汇好望角酒店.jpg",
+    hideFromHome: true
+  },
+  {
+    id: 29,
+    title: "Shaoxing Shangbai Hotel",
+    title_zh: "绍兴尚柏酒店",
+    category: "Commercial",
+    imageUrl: "https://i.postimg.cc/vTzBJsQd/portfolio_2025_页面_040绍兴尚柏酒店.jpg",
+    hideFromHome: true
   }
 ];
