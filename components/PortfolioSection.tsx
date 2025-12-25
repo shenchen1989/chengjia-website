@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Content, PortfolioItem, Language } from '../types';
 import { PORTFOLIO_ITEMS } from '../constants';
@@ -10,9 +11,6 @@ interface PortfolioSectionProps {
 }
 
 const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectClick, lang }) => {
-  // 过滤掉不该在首页展示的项目
-  const visibleItems = PORTFOLIO_ITEMS.filter(item => !item.hideFromHome);
-
   return (
     <section id="portfolio" className="py-20 bg-transparent">
       <div className="max-w-[1800px] mx-auto px-4 md:px-8">
@@ -31,12 +29,9 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
 
         {/* Compositional Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-[10px] w-full">
-          {visibleItems.map((item: PortfolioItem, index: number) => {
+          {PORTFOLIO_ITEMS.map((item: PortfolioItem, index: number) => {
             const displayTitle = (lang === 'zh' && item.title_zh) ? item.title_zh : item.title;
             
-            // Check if the image needs cropping (legacy portfolio pages)
-            const needsCrop = item.imageUrl.includes('页面') || item.imageUrl.includes('portfolio');
-
             const patternIndex = index % 4;
 
             let colSpan = "";
@@ -76,23 +71,15 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ content, onProjectC
                     onClick={() => onProjectClick(item)}
                 >
                     {/* Image Container */}
-                    <div className={`relative overflow-hidden bg-white ${textVertical ? 'flex-1' : 'w-full'} ${aspectRatio}`}>
-                        {/* Physical Masks for Thumbnails - 增加遮罩高度至10% */}
-                        {needsCrop && (
-                            <>
-                                <div className="absolute top-0 left-0 right-0 h-[10%] bg-white z-20"></div>
-                                <div className="absolute bottom-0 left-0 right-0 h-[10%] bg-white z-20"></div>
-                            </>
-                        )}
-                        
+                    <div className={`relative overflow-hidden bg-morandi-200 ${textVertical ? 'flex-1' : 'w-full'} ${aspectRatio}`}>
                         <img
                             src={item.imageUrl}
                             alt={displayTitle}
-                            className={`w-full h-full object-cover transition-all duration-[0.8s] ease-out group-hover:contrast-[1.02] opacity-100 ${needsCrop ? 'scale-[1.18] z-10 relative' : 'group-hover:scale-105'}`}
-                            loading="lazy"
+                            className="w-full h-full object-cover transition-all duration-[0.8s] ease-out group-hover:scale-105 group-hover:contrast-[1.02] opacity-100"
+                            loading="eager"
                         />
                         <WatermarkOverlay />
-                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay z-30"></div>
+                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay"></div>
                     </div>
 
                     {/* Text Container */}

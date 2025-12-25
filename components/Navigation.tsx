@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Language, Content } from '../types';
 import Logo from './Logo';
 
@@ -78,30 +78,26 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
 
         {/* Bottom: Flags & Info */}
         <div>
-            <div className="mb-4">
-                <div className="flex items-center gap-2 mb-4">
-                    <span className="text-xs font-bold text-accent-red border-b-2 border-accent-red/20 pb-0.5 tracking-wider">
-                        切换语言
-                    </span>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                    {languages.map((l) => (
-                        <button
-                            key={l.code}
-                            onClick={() => handleLangChange(l.code)}
-                            className={`flex items-center gap-2 p-1.5 rounded transition-all duration-200 ${lang === l.code ? 'bg-accent-red/10 border border-accent-red/20 scale-105 shadow-sm' : 'hover:bg-white border border-transparent opacity-60'}`}
-                            title={l.label}
-                        >
-                            <span className="text-lg">{l.flag}</span>
-                            <span className={`text-[10px] font-bold uppercase tracking-tighter ${lang === l.code ? 'text-accent-red' : 'text-morandi-400'}`}>
-                                {l.code}
-                            </span>
-                        </button>
-                    ))}
-                </div>
+            <div className="text-[10px] font-bold text-accent-red mb-4 uppercase tracking-[0.2em]">
+                {content.switchLanguage}
+            </div>
+            <div className="grid grid-cols-2 gap-3 mb-8">
+                {languages.map((l) => (
+                    <button
+                        key={l.code}
+                        onClick={() => handleLangChange(l.code)}
+                        className={`flex items-center gap-2 p-1.5 rounded transition-all duration-200 ${lang === l.code ? 'bg-accent-red/10 border border-accent-red/20 scale-105' : 'hover:bg-white border border-transparent'}`}
+                        title={l.label}
+                    >
+                        <span className="text-lg">{l.flag}</span>
+                        <span className={`text-[10px] font-bold uppercase tracking-tighter ${lang === l.code ? 'text-accent-red' : 'text-morandi-400'}`}>
+                            {l.code}
+                        </span>
+                    </button>
+                ))}
             </div>
             
-            <div className="text-[9px] text-morandi-300 leading-relaxed font-sans mt-8 pt-6 border-t border-morandi-200">
+            <div className="text-[9px] text-morandi-300 leading-relaxed font-sans">
                 &copy; {new Date().getFullYear()} CJ Studio.<br/>
                 All rights reserved.
             </div>
@@ -111,6 +107,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
       {/* ================= MOBILE TOPBAR ================= */}
       <nav className="md:hidden sticky top-0 z-50 bg-morandi-100/95 backdrop-blur-md border-b border-morandi-200">
         <div className="px-6 h-16 flex justify-between items-center">
+            {/* Logo */}
             <a href="#home" onClick={handleLogoClick} className="flex items-center gap-3">
                <div className="h-8 w-8"> 
                    <Logo className="h-full w-full text-accent-red" />
@@ -120,6 +117,7 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
                </span>
             </a>
 
+            {/* Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-morandi-900 focus:outline-none p-2"
@@ -128,8 +126,9 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
             </button>
         </div>
 
+        {/* Mobile Dropdown */}
         {isOpen && (
-            <div className="absolute top-16 left-0 w-full bg-morandi-100 border-b border-morandi-200 shadow-xl h-[calc(100vh-64px)] flex flex-col p-8 animate-fade-in overflow-y-auto">
+            <div className="absolute top-16 left-0 w-full bg-morandi-100 border-b border-morandi-200 shadow-xl h-screen flex flex-col p-8 animate-fade-in">
                 <div className="flex flex-col space-y-8 mt-8">
                     {navLinks.map((link) => (
                     <a
@@ -146,20 +145,19 @@ const Navigation: React.FC<NavigationProps> = ({ lang, setLang, content, onHomeC
                     ))}
                 </div>
                 
-                <div className="mt-auto border-t border-morandi-200 pt-8">
-                    <div className="flex items-center gap-2 mb-6">
-                        <Globe size={16} className="text-accent-red" />
-                        <span className="text-sm font-bold text-morandi-800">切换语言 / Language</span>
+                <div className="mt-auto mb-20 border-t border-morandi-200 pt-8">
+                    <div className="text-xs font-bold text-accent-red mb-4 uppercase tracking-[0.2em]">
+                        {content.switchLanguage}
                     </div>
-                    <div className="flex items-center gap-4 overflow-x-auto pb-4 scrollbar-hide">
+                    <div className="flex items-center gap-6 overflow-x-auto pb-4">
                         {languages.map((l) => (
                             <button
                                 key={l.code}
                                 onClick={() => handleLangChange(l.code)}
-                                className={`flex flex-col items-center gap-2 p-3 rounded-lg min-w-[80px] transition-all ${lang === l.code ? 'bg-accent-red/10 border-2 border-accent-red/20' : 'bg-white/50 border-2 border-transparent opacity-70'}`}
+                                className={`flex flex-col items-center gap-2 p-3 rounded-lg min-w-[70px] transition-all ${lang === l.code ? 'bg-accent-red/10 border-2 border-accent-red/20' : 'bg-white/50 border-2 border-transparent'}`}
                             >
                                 <span className="text-3xl">{l.flag}</span>
-                                <span className={`text-[10px] font-bold uppercase tracking-widest ${lang === l.code ? 'text-accent-red' : 'text-morandi-500'}`}>
+                                <span className={`text-xs font-bold uppercase tracking-widest ${lang === l.code ? 'text-accent-red' : 'text-morandi-500'}`}>
                                     {l.label}
                                 </span>
                             </button>
