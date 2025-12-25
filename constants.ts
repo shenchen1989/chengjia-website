@@ -1,4 +1,3 @@
-
 import { Content, PortfolioItem } from './types';
 
 // =================================================================
@@ -606,7 +605,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 21,
     title: "MR CHOI Dessert Pudong Airport Store",
-    title_zh: "MR CHOI 甜品铺东机场店",
+    title_zh: "MR CHOI 甜品上海浦东机场店",
     category: "Commercial",
     description_zh: "位于上海浦东国际机场的高客流量交通枢纽精品零售空间。该项目为任职于 DLArchitecture 期间参与。",
     location: "Shanghai, China",
