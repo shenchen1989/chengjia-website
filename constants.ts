@@ -35,7 +35,7 @@ export const CONTENT: Record<string, Content> = {
     },
     services: {
       title: "我们的服务",
-      subtitle: "以设计效果为导向的全案服务，涵盖空间、产品与品牌视觉，确保从概念到实物的精准还原。",
+      subtitle: "以设计效果为导向的全案服务，涵盖空间、产品 with 品牌视觉，确保从概念到实物的精准还原。",
       items: [
         { title: "商业空间全案设计", description: "餐厅、酒吧、零售店铺及办公空间。提供专业的动线规划与合规设计。", icon: "Commercial" },
         { title: "住宅与别墅室内设计", description: "专注别墅、大平层及私宅改造。提供平面规划到 3D 模拟的完整咨询。", icon: "Home" },
@@ -297,7 +297,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/D02HWbyX/户外9.jpg", "https://i.postimg.cc/X71mJqMF/月光林地47.jpg", "https://i.postimg.cc/qMDSRqfy/月光林地48.jpg", 
       "https://i.postimg.cc/7Ytd6hvn/月光林地55.jpg", "https://i.postimg.cc/5NKT0ycm/月光林地56.jpg", "https://i.postimg.cc/hPZ6jvF2/月光林地57.jpg", 
       "https://i.postimg.cc/J4Yvn0w6/月光林地58.jpg", "https://i.postimg.cc/pXc4TrN1/月光林地59.jpg", "https://i.postimg.cc/TYNFw18s/月光林地60.jpg", 
-      "https://i.postimg.cc/wjtPszHb/月光林地61.jpg", "https://i.postimg.cc/7ZCcT4Dd/月光林地62.jpg", "https://i.postimg.cc/8zF3rGNQ/月光林地63.jpg", 
+      "https://i.postimg.cc/wjtPszHb/月光林地61.jpg", "https://i.postimg.cc/7ZCcT4Dd/月光 பகলിடம்62.jpg", "https://i.postimg.cc/8zF3rGNQ/月光林地63.jpg", 
       "https://i.postimg.cc/DwWDbhnK/月光林地64.jpg", "https://i.postimg.cc/P5Lc8HTT/月光林地65.jpg", "https://i.postimg.cc/6pDPrPpZ/竹迷宫区36.jpg", 
       "https://i.postimg.cc/W1QyGy1M/竹迷宫区38.jpg", "https://i.postimg.cc/sgtLYLgJ/竹迷宫区39.jpg", "https://i.postimg.cc/dVzf2fVn/竹迷宫区40.jpg", 
       "https://i.postimg.cc/bwK5x5wg/竹迷宫区41.jpg", "https://i.postimg.cc/qv9FsFvj/竹迷宫区42.jpg", "https://i.postimg.cc/d0rx49h8/竹迷宫区43.jpg", 
@@ -453,7 +453,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     description_zh: "都灵全案别墅设计，占地面积广阔。设计上延续了 CJ Studio 一贯的现代简约美学，通过大面积的落地窗引入自然光线，模糊室内外的界限。空间布局上采用了开放式设计，强调动线的流畅与功能的复合。材质选择上以石材、木质与微水泥为主，冷暖交织，营造出一种低调而奢华的静谧感。",
     description: "A sprawling villa design in Turin following CJ Studio's signature modern minimalism. Large floor-to-ceiling windows blur indoor-outdoor boundaries. Open-plan layout and a mix of stone, wood, and micro-cement create a quiet luxury.",
     description_it: "Un ampio progetto di villa a Torino che segue il minimalismo moderno di CJ Studio. Grandi vetrate fondono interno ed esterno. Il layout open-space e il mix di materiali creano un lusso silenzioso.",
-    description_da: "Et stort villadesign i Torino, der følger CJ Studios moderne minimalisme. Store vinduespartier udvisker grænsen mellem inde og ude. En blanding af sten, træ og mikrocement skaber en rolig luksus.",
+    description_da: "Et stort villadesign i Torino, der følger CJ Studios moderne minimalisme. Store vinduespartier udvisker grænsen mellem inde og ude. En blanding af sten, træ og mikrocement skaber en borgerlig luksus.",
     location: "Torino, Italy",
     year: "2024",
     imageUrl: "https://i.postimg.cc/jdMVRbVV/GF场景_2.png",
@@ -596,20 +596,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     ]
   },
   {
-    id: 20,
-    title: "ASCENTIAL Shanghai Office",
-    title_zh: "ASCENTIAL上海办公室",
-    category: "Commercial",
-    description_zh: "为全球信息服务公司打造充满活力且功能齐全的办公环境。该项目为任职于 DLArchitecture 期间参与。",
-    description: "A dynamic and functional office environment for a global information services company. This project was completed during tenure at DLArchitecture.",
-    description_it: "Un ambiente d'ufficio dinamico e funzionale per una società globale di servizi informativi. Progetto realizzato durante il periodo presso DLArchitecture.",
-    description_da: "Et dynamisk og funktionelt kontormiljø for et globalt informationsfirma. Projektet blev udført under ansættelse hos DLArchitecture.",
-    location: "Shanghai, China",
-    year: "2021",
-    imageUrl: "https://i.postimg.cc/qBwPSR8w/portfolio_2025_页面_019ASCENTIAL上海办公室.jpg",
-    gallery: ["https://i.postimg.cc/qBwPSR8w/portfolio_2025_页面_019ASCENTIAL上海办公室.jpg", "https://i.postimg.cc/59ghT0w3/portfolio_2025_页面_020ASCENTIAL上海办公室.jpg"]
-  },
-  {
     id: 33,
     title: "Sushi Nami",
     title_zh: "Sushi Nami 餐厅设计",
@@ -626,122 +612,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "https://i.postimg.cc/D0nQNzqZ/场景_2.jpg", "https://i.postimg.cc/Kjx7WYnK/场景_3.jpg", "https://i.postimg.cc/FzNb6Kjk/场景_4.jpg", "https://i.postimg.cc/J0M3FhbX/场景_5.jpg", 
       "https://i.postimg.cc/QChgzMp1/场景_6.jpg", "https://i.postimg.cc/Bb45zvxx/场景_7.jpg", "https://i.postimg.cc/L52kWszt/场景_8.jpg", "https://i.postimg.cc/rsMGHpSG/场景_9.jpg", 
       "https://i.postimg.cc/4ysv03z1/场景_11.jpg"
-    ]
-  },
-  {
-    id: 17,
-    title: "Standard Chartered Bank Shanghai Office",
-    title_zh: "渣打银行上海办公室",
-    category: "Commercial",
-    description_zh: "渣打银行上海办公室室内设计项目。该项目为任职于 Woods Bagot 期间参与。通过现代办公空间的重新定义，提升企业形象与协作效率。",
-    description: "Interior design for Standard Chartered Bank's Shanghai office. Completed during tenure at Woods Bagot. Redefining modern workspace to enhance corporate identity.",
-    description_it: "Interior design per l'ufficio di Shanghai di Standard Chartered Bank. Realizzato durante il periodo presso Woods Bagot. Ridefinizione dello spazio di lavoro moderno.",
-    description_da: "Indretning af Standard Chartered Banks kontor i Shanghai. Udført under ansættelse hos Woods Bagot. Redefinering af det moderne arbejdsmiljø.",
-    location: "Shanghai, China",
-    year: "2023",
-    imageUrl: "https://i.postimg.cc/G3TMJmXT/portfolio_2025_页面_004渣打银行上海办公室.jpg",
-    gallery: [
-      "https://i.postimg.cc/G3TMJmXT/portfolio_2025_页面_004渣打银行上海办公室.jpg", "https://i.postimg.cc/9ffb4mDs/portfolio_2025_页面_003渣打银行上海办公室.jpg", 
-      "https://i.postimg.cc/sgmKDQgJ/portfolio_2025_页面_005渣打银行上海办公室.jpg", "https://i.postimg.cc/cH2FypLL/portfolio_2025_页面_006渣打银行上海办公室.jpg", 
-      "https://i.postimg.cc/28p0HNtq/portfolio_2025_页面_007渣打银行上海办公室.jpg", "https://i.postimg.cc/L6zNw0K9/portfolio_2025_页面_008渣打银行上海办公室.jpg", 
-      "https://i.postimg.cc/JzMPLcMw/portfolio_2025_页面_009渣打银行上海办公室.jpg", "https://i.postimg.cc/wBB2tqtK/portfolio_2025_页面_010渣打银行上海办公室.jpg"
-    ]
-  },
-  {
-    id: 21,
-    title: "MR CHOI Dessert Shanghai Pudong Airport Store",
-    title_zh: "MR CHOI 甜品上海浦东机场店",
-    category: "Commercial",
-    description_zh: "位于上海浦东国际机场的高客流量交通枢纽精品零售空间。该项目为任职于 DLArchitecture 期间参与。",
-    description: "Boutique retail space located in the high-traffic hub of Shanghai Pudong International Airport. This project was completed during tenure at DLArchitecture.",
-    description_it: "Spazio retail boutique situato nell'hub ad alto traffico dell'aeroporto internazionale di Shanghai Pudong. Progetto realizzato presso DLArchitecture.",
-    description_da: "Boutique-butik placeret i den travle Shanghai Pudong Internationale Lufthavn. Projektet blev udført under ansættelse hos DLArchitecture.",
-    location: "Shanghai, China",
-    year: "2020",
-    imageUrl: "https://i.postimg.cc/0j7b5SPS/portfolio_2025_页面_025MR_CHOI甜品浦东机场店.jpg",
-    gallery: ["https://i.postimg.cc/0j7b5SPS/portfolio_2025_页面_025MR_CHOI甜品浦东机场店.jpg", "https://i.postimg.cc/zvTVDh8W/portfolio_2025_页面_026MR_CHOI甜品浦东机场店.jpg"]
-  },
-  {
-    id: 18,
-    title: "Hangzhou Binjiang Intime Shopping Mall",
-    title_zh: "杭州滨江银泰购物广场",
-    category: "Commercial",
-    description_zh: "大型商业综合体设计项目。该项目为任职于 Woods Bagot 期间参与。",
-    description: "Large-scale commercial complex design project. This project was completed during tenure at Woods Bagot.",
-    description_it: "Progetto di design per un grande complesso commerciale. Realizzato durante il periodo presso Woods Bagot.",
-    description_da: "Design af et stort kommercielt kompleks. Projektet blev udført under ansættelse hos Woods Bagot.",
-    location: "Hangzhou, China",
-    year: "2022",
-    imageUrl: "https://i.postimg.cc/sXVn4YHm/portfolio_2025_页面_011杭州滨江银泰购物广场.jpg",
-    gallery: ["https://i.postimg.cc/sXVn4YHm/portfolio_2025_页面_011杭州滨江银泰购物广场.jpg", "https://i.postimg.cc/mrWptfYx/portfolio_2025_页面_012杭州滨江银泰购物广场.jpg"]
-  },
-  {
-    id: 19,
-    title: "Sunche Oil Shanghai Bund Office",
-    title_zh: "鑫驰石油上海外滩办公室",
-    category: "Commercial",
-    description_zh: "位于外滩的精品办公室设计项目。该项目为任职于 DLArchitecture 期间参与。",
-    description: "A premium office design project located on the Shanghai Bund. This project was completed during tenure at DLArchitecture.",
-    description_it: "Progetto di design per ufficio premium situato sul Bund di Shanghai. Realizzato presso DLArchitecture.",
-    description_da: "Eksklusivt kontordesign beliggende ved Bund i Shanghai. Projektet blev udført under ansættelse hos DLArchitecture.",
-    location: "Shanghai, China",
-    year: "2021",
-    imageUrl: "https://i.postimg.cc/zDxC9Z3C/portfolio_2025_页面_017鑫驰石油上海外滩办公室.jpg",
-    gallery: ["https://i.postimg.cc/zDxC9Z3C/portfolio_2025_页面_017鑫驰石油上海外滩办公室.jpg", "https://i.postimg.cc/Wp5GQLt0/portfolio_2025_页面_018鑫驰石油上海外滩办公室.jpg"]
-  },
-  {
-    id: 34,
-    title: "Shanghai Wuyi Road Townhouse",
-    title_zh: "上海武夷路排屋",
-    category: "Residential",
-    description_zh: "上海武夷路老洋房排屋改造项目。在保留历史建筑韵味的同时，注入现代简约的居住功能与审美。该项目为任职于 DLArchitecture 期间参与。通过对室内空间的重组、自然材质的运用以及精细的灯光设计，打造出一处闹中取静的高端海派私密居所。",
-    description: "Renovation of a historical townhouse on Wuyi Road, Shanghai. This project was completed during tenure at DLArchitecture. It blends historical charm with modern minimalist living functions.",
-    description_it: "Ristrutturazione di una casa storica in via Wuyi, Shanghai. Progetto realizzato presso DLArchitecture. Unisce il fascino storico con funzioni abitative minimaliste moderne.",
-    description_da: "Renovering af et historisk byhus på Wuyi Road, Shanghai. Projektet blev udført under ansættelse hos DLArchitecture. Det forener historisk charme med moderne minimalisme.",
-    location: "Shanghai, China",
-    year: "2023",
-    imageUrl: "https://i.postimg.cc/9Qj4rJnL/portfolio_2025_页面_066上海武夷路排屋.jpg",
-    gallery: [
-      "https://i.postimg.cc/9Qj4rJnL/portfolio_2025_页面_066上海武夷路排屋.jpg", "https://i.postimg.cc/8zVFjt0c/portfolio_2025_页面_063上海武夷路排屋.jpg", 
-      "https://i.postimg.cc/K8yKRJH4/portfolio_2025_页面_064上海武夷路排屋.jpg", "https://i.postimg.cc/HsMcYfBb/portfolio_2025_页面_065上海武夷路排屋.jpg", 
-      "https://i.postimg.cc/zBMSy6Ms/portfolio_2025_页面_117.jpg", "https://i.postimg.cc/MT4bnN44/portfolio_2025_页面_118.jpg"
-    ]
-  },
-  {
-    id: 35,
-    title: "Shaoxing Shangbai Hotel",
-    title_zh: "绍兴尚柏酒店",
-    category: "Commercial",
-    description_zh: "绍兴尚柏酒店全案设计项目。设计旨在平衡 modern 奢华与地域文化特色，为宾客提供极致的商务与休闲居住体验。该项目为任职于 DLArchitecture 期间参与。空间布局涵盖了宏伟的大堂、精致的餐厅以及舒适的客房。项目展现了 CJ Studio 在处理大型商业综合体与高端酒店空间时，对美学与功能的深度把控。",
-    description: "Comprehensive design for Shaoxing Shangbai Hotel. This project was completed during tenure at DLArchitecture. It balances modern luxury with regional cultural characteristics.",
-    description_it: "Design completo per lo Shangbai Hotel di Shaoxing. Progetto realizzato presso DLArchitecture. Bilancia il lusso moderno con le caratteristiche culturali regionali.",
-    description_da: "Komplet design af Shaoxing Shangbai Hotel. Projektet blev udført under ansættelse hos DLArchitecture. Det balancerer moderne luksus med lokale kulturelle særtræk.",
-    location: "Shaoxing, China",
-    year: "2023",
-    imageUrl: "https://i.postimg.cc/vTzBJsQd/portfolio_2025_页面_040绍兴尚柏酒店.jpg",
-    gallery: [
-      "https://i.postimg.cc/vTzBJsQd/portfolio_2025_页面_040绍兴尚柏酒店.jpg", "https://i.postimg.cc/mkwDvsTq/portfolio_2025_页面_041绍兴尚柏酒店.jpg", 
-      "https://i.postimg.cc/GtQ2WCb6/portfolio_2025_页面_042绍兴尚柏酒店.jpg", "https://i.postimg.cc/j2X5pbRm/portfolio_2025_页面_043绍兴尚柏酒店.jpg"
-    ]
-  },
-  {
-    id: 37,
-    title: "Zhejiang Ningbo Villa",
-    title_zh: "浙江宁波别墅",
-    category: "Residential",
-    description_zh: "位于浙江宁波的高端私人别墅全案设计。项目通过对空间的艺术化重构，融合了现代奢华与自然意趣。该项目为任职于 DLArchitecture 期间参与。室内设计强调了光影的叙事性，通过大面积的石材与原木搭配，营造出一种静谧且具有厚重感的顶级居住体验。",
-    description: "High-end private villa design in Ningbo, Zhejiang. This project was completed during tenure at DLArchitecture. It merges modern luxury with natural elements through artistic spatial reconstruction.",
-    description_it: "Design di una villa privata di alto livello a Ningbo, Zhejiang. Progetto realizzato presso DLArchitecture. Fonde il lusso moderno con elementi naturali attraverso una ricostruzione spaziale artistica.",
-    description_da: "Eksklusivt villadesign i Ningbo, Zhejiang. Projektet blev udført under ansættelse hos DLArchitecture. Det forener moderne luksus med naturlige elementer.",
-    location: "Ningbo, China",
-    year: "2023",
-    imageUrl: "https://i.postimg.cc/Kj2Xn3SC/portfolio_2025_页面_054浙江宁波别墅.jpg",
-    gallery: [
-      "https://i.postimg.cc/Kj2Xn3SC/portfolio_2025_页面_054浙江宁波别墅.jpg", "https://i.postimg.cc/NFch12qC/portfolio_2025_页面_055浙江宁波别墅.jpg", 
-      "https://i.postimg.cc/MHSkyfJW/portfolio_2025_页面_056浙江宁波别墅.jpg", "https://i.postimg.cc/85WQJB3b/portfolio_2025_页面_057浙江宁波别墅.jpg", 
-      "https://i.postimg.cc/MZ7Jz51p/portfolio_2025_页面_111.jpg", "https://i.postimg.cc/JhfSLHnG/portfolio_2025_页面_112.jpg", 
-      "https://i.postimg.cc/3J9MvwSh/portfolio_2025_页面_113.jpg", "https://i.postimg.cc/yYnqZNf5/portfolio_2025_页面_114.jpg", 
-      "https://i.postimg.cc/RFwyVC6G/portfolio_2025_页面_115.jpg", "https://i.postimg.cc/dVSz5xcH/portfolio_2025_页面_116.jpg"
     ]
   }
 ];
